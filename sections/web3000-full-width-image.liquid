@@ -1,0 +1,88 @@
+{{ 'web3000-full-width-image-section.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% if section.settings.landing_image %} 
+<div class="landing-hero-logo-part-1">
+  {% render 'HS_Hatice_part_1' %}
+</div>
+<div class="landing-hero-logo-part-2">
+  {% render 'HS_Hatice_part_2' %}
+</div>
+{% endif %}
+
+{% if section.settings.image %}
+  {% if section.settings.link != blank %}
+    <a href="{{ section.settings.link }}">
+  {% endif %}
+  <div class="web3000-full-width-image bold-underline {% if section.settings.landing_image %} landing-hero-media {% endif %}">
+    <div class="relative {% if section.settings.no_cropping %}h-auto{% else %}h-screen{% endif %}">
+      {% if section.settings.text %}
+        <div class="web3000-full-width-image__text">{{ section.settings.text }}</div>
+      {% endif %}
+      {% if section.settings.image %}
+      <div class="{% if section.settings.no_cropping %}h-auto no-cropping{% else %}h-full cropping{% endif %}{% if section.settings.mobile_image %} hide-small{% endif %}">
+        {% render 'image' with  image: section.settings.image
+          , class_name: 'web3000-full-width-image__image '
+        %}
+      </div>
+      {% endif %}
+      {% if section.settings.mobile_image %}
+        <div class="{% if section.settings.no_cropping %}h-auto no-cropping{% else %}h-full cropping{% endif %} hide-large">
+          {% render 'image' with  image: section.settings.mobile_image
+            , class_name: 'web3000-full-width-image__image '
+          %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  {% if section.settings.link != blank %}
+    </a>
+  {% endif %}
+{% endif %}
+
+{% schema %}
+  {
+    "name": "web3000 Full Width Image",
+    "class": "web3000-full-width-image-block",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.image-banner.blocks.image.settings.image.label__1",
+        "info": "t:sections.image-banner.blocks.image.settings.image.info_1"
+      }, {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "t:sections.image-banner.blocks.image.settings.image.label__2",
+        "info": "t:sections.image-banner.blocks.image.settings.image.info_2"
+      }, 
+      {
+      "type": "checkbox",
+      "id": "landing_image",
+      "label": "Landing Page Image",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "no_cropping",
+      "label": "No Cropping",
+      "default": false
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "t:sections.rich-text.blocks.text.settings.text.label"
+      }, {
+        "type": "url",
+        "id": "link",
+        "label": "Link",
+        "info": "Add a link to wrap the entire section"
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 Full Width Image"
+      }
+    ]
+  }
+{% endschema %}

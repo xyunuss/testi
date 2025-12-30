@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "web3000_collection_tGnxWB": {
+      "type": "web3000-collection",
+      "blocks": {
+        "group_KwgBww": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HS-Campaign_Beauty_L06_0706.jpg",
+            "product_link": "",
+            "product_title": "",
+            "color": ""
+          }
+        },
+        "group_EEJmRm": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_CLOSEDPACKAGING_Double.jpg",
+            "product_link": "shopify://products/the-gift-matte-lipstick",
+            "product_title": "THE GIFT",
+            "color": "NEW LEVEL MATTE LIPSTICK"
+          }
+        },
+        "group_pYxUwd": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_TrueCheryy_Double_Open_copy_5fb063fb-233d-41a1-a4c7-156c08095988.jpg",
+            "product_link": "shopify://products/the-liner",
+            "product_title": "THE LINER",
+            "color": "MATTE LASER LIP LINER"
+          }
+        },
+        "group_aLUggh": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRUSH_CLOSEUPcopy.jpg",
+            "product_link": "shopify://products/the-lip-brush",
+            "product_title": "THE LIP BRUSH",
+            "color": "PRECISE LIP BRUSH - L001"
+          }
+        },
+        "group_Dxi6bz": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HS-Campaign_Beauty_L07_0864.jpg",
+            "product_link": "",
+            "product_title": "",
+            "color": ""
+          }
+        },
+        "group_GFYqy6": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_REFILL_CaramelNectar_Open.jpg",
+            "product_link": "shopify://products/the-gift-refill-version",
+            "product_title": "THE REFILL",
+            "color": "NEW LEVEL MATTE LIPSTICK"
+          }
+        }
+      },
+      "block_order": [
+        "group_KwgBww",
+        "group_EEJmRm",
+        "group_pYxUwd",
+        "group_aLUggh",
+        "group_Dxi6bz",
+        "group_GFYqy6"
+      ],
+      "settings": {
+        "collection_title": "THE GIFT",
+        "collection_subtitle": "Kollektion"
+      }
+    },
+    "web3000_collection_cEW4Wn": {
+      "type": "web3000-collection",
+      "blocks": {
+        "group_rrYDqD": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRONZER_TAN_SWATCH_copy_3d29439e-486f-4044-be74-4302cf9056f6.jpg",
+            "product_link": "",
+            "product_title": "",
+            "color": ""
+          }
+        },
+        "group_tr6LXE": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRONZERS_Light_OPEN_Double_copy_b00c2a4b-e74b-4a58-a9a2-e09e51feb628.jpg",
+            "product_link": "shopify://products/bronzer",
+            "product_title": "THE BRONZER",
+            "color": "HYBRID-TECH"
+          }
+        },
+        "group_PiVx6D": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HS-Campaign_Single_L04_1561.jpg",
+            "product_link": "",
+            "product_title": "",
+            "color": ""
+          }
+        },
+        "group_DtUtz6": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_HIGHLIGHTER_FAIR_OPEN_002copy.jpg",
+            "product_link": "shopify://products/highlighter",
+            "product_title": "THE HIGHLIGHTER",
+            "color": "HYBRID-TECH"
+          }
+        }
+      },
+      "block_order": [
+        "group_rrYDqD",
+        "group_tr6LXE",
+        "group_PiVx6D",
+        "group_DtUtz6"
+      ],
+      "settings": {
+        "collection_title": "THE LaBS EDITION",
+        "collection_subtitle": ""
+      }
+    }
+  },
+  "order": [
+    "web3000_collection_tGnxWB",
+    "web3000_collection_cEW4Wn"
+  ]
+}

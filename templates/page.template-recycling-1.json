@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "web3000-recycling-page",
+      "blocks": {
+        "recycling_icon_nCMVqN": {
+          "type": "recycling_icon",
+          "settings": {
+            "recycling_icon": "shopify://shop_images/Frame_23.svg"
+          }
+        },
+        "recycling_icon_HMwT6j": {
+          "type": "recycling_icon",
+          "settings": {
+            "recycling_icon": "shopify://shop_images/Group_246.svg"
+          }
+        }
+      },
+      "block_order": [
+        "recycling_icon_nCMVqN",
+        "recycling_icon_HMwT6j"
+      ],
+      "settings": {
+        "product_image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_TrueCherry_CLOSED_Double_copy_8b798f8a-aa6e-449e-87fe-79461b50a94d.jpg",
+        "recycling_text": "<p><strong>THE LINER</strong></p><p>Hergestellt aus Kunststoff (ABS) mit Metall-Overshell. <br/>Made from plastic (ABS) with metal overshell. <br/>Realizzato in un imballaggio di plastica (ABS) con sovraccoperta in metallo.</p><p><strong><br/>Wie zu entsorgen | How to dispose | Smaltimeto*:<br/><br/>C/ABS 90</strong>: Kunststoff/Aluminium | plastic/aluminum | plastica/alluminio<br/>Den Lipliner im Restmüll entsorgen.<br/>Place lipliner in trash.<br/>Lipliner: Contenitore raccolta indifferenziata.<br/><br/><strong>PAP 20</strong>: Wellpappe | paper and fibreboard packaging | cartone ondulato<br/><strong>PAP 21</strong>: sonstige Pappe | paper and fibreboard packaging | cartone non ondulato<br/>Umverpackung und Versandmaterialien gehören ins Altpapier.<br/>Place packaging and all shipping materials in paper bank.<br/>Materiale d'imballaggio e di spedizione: raccolta della carta e del cartone.</p><h6>* Kann von Land zu Land unterschiedlich sein. Bitte die örtlichen Bestimmungen vor Ort prüfen.<br/>Can be different per country. Please check the local regulations.<br/>Potrebbe variare a seconda del Paese. Si prega di controllare le normative locali.</h6>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

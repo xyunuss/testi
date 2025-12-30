@@ -1,0 +1,101 @@
+.web3000-popup-close {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: fit-content;
+	color: var(--color-text-darkGray2);
+	line-height: 1;
+	font-size: var(--font-size-small);
+	letter-spacing: 0;
+	text-align: center;
+	text-decoration: underline;
+	border: none;
+	padding: 1rem;
+	background-color: transparent;
+	text-underline-offset: 0.2em;
+}
+
+.web3000-popup-wrapper {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.web3000-popup-header {
+	column-gap: 1rem;
+}
+
+.web3000-popup-header,
+.web3000-popup-content-form {
+	display: grid;
+	padding-top: var(--wrap);
+}
+
+.web3000-popup-content-form .sib-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.web3000-popup-content-form .sib-optin {
+	margin-bottom: .6em;
+}
+
+.web3000-popup-content-form #sib-container {
+	background: transparent;
+	margin: 0 auto;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.web3000-popup-content-form .sib-form-block {
+	padding: 0;
+}
+
+.web3000-popup-content-form .sib-form .entry__field {
+	border: none;
+	border-radius: 0;
+	text-align: center;
+	text-transform: none;
+	margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.web3000-popup-content-form {
+		gap: 1rem;
+	}
+
+	.web3000-popup-header {
+		padding-top: 2rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.web3000-popup-wrapper {
+		max-height: 50vh;
+		min-height: 30rem;
+		justify-content: flex-end;
+	}
+
+	.web3000-newsletter-popup .web3000-popup-wrapper {
+		min-height: min(90vh, 44rem);
+	}
+
+	.web3000-popup-header {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		position: absolute;
+		top: 60%;
+		transform: translateY(-50%);
+		text-align: center;
+		width: 100%;
+        padding-top 0;
+	}
+}

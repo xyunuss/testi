@@ -1,0 +1,116 @@
+.web3000-collection-products {
+	padding-bottom: 4rem;
+}
+
+.web3000-collection-title-wrapper {
+	display: flex;
+	column-gap: 0.5rem;
+	padding: 0 var(--wrap);
+	margin-bottom: 0.5rem;
+	margin-top: 4.5em;
+}
+
+.web3000-collection__subtitle {
+	color: var(--color-text-lightGray-2);
+}
+
+.web3000-collection__block {
+    display: block;
+    margin-bottom: 3rem;
+}
+
+
+
+.web3000-collection__images {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1.2em;
+	background-color: var(--footer-bg-color);
+}
+
+.web3000-collection__images-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.3s;
+	color: var(--color-text-white);
+	z-index: 3;
+}
+
+.web3000-collection__image {
+	height: auto;
+}
+
+.web3000-collection__product-color {
+	color: var(--color-text-lightGray-2);
+    margin-bottom: .7em;
+}
+
+@media screen and (max-width: 1023px) {
+	a.web3000-collection__block.web3000-collection__block--active .web3000-collection__image {
+		filter: blur(2px);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	a.web3000-collection__block .web3000-collection__images:hover .web3000-collection__image {
+		filter: blur(2px);
+	}
+}
+
+a.web3000-collection__block.web3000-collection__block--active .web3000-collection__images-text {
+	@media screen and (max-width: 1023px) {
+		opacity: 1;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	a.web3000-collection__block .web3000-collection__images:hover .web3000-collection__images-text {
+		opacity: 1;
+	}
+}
+
+.grid-sizer--collection,
+.web3000-isotope__block--collection {
+	width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+	.grid-sizer--collection,
+	.web3000-isotope__block--collection {
+		width: 33.3333%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.web3000-collection-title-wrapper {
+		margin-top: -1.3rem;
+	}
+
+	.web3000-collection-section {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		column-gap: var(--grid-gap);
+	}
+
+	.web3000-collection-products {
+		padding-bottom: 10rem;
+	}
+
+	.grid-sizer--collection,
+	.web3000-isotope__block--collection {
+		width: 16.66666%;
+	}
+
+    .web3000-collection__block,
+    .web3000-collection__product-color  {
+        margin-bottom: 0;
+    }
+}
+
+.shopify-section:last-child .web3000-collection-products {
+	padding-bottom: 0;
+}

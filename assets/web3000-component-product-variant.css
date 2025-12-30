@@ -1,0 +1,17 @@
+.web3000-color-swatches {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.web3000-color-swatch {
+	width: 3rem;
+	height: 1rem;
+	cursor: pointer;
+	display: block !important;
+}
+
+.swiper-slide[data-slide-variant]:not(.variant-slide-first) {
+	display: none;
+}
+

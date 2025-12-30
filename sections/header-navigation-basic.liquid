@@ -1,0 +1,163 @@
+{{ 'component-megamenu.css' | asset_url | stylesheet_tag: preload: true }}
+
+<div class="header-navigation header-nav-basic pt-5 pb-5">
+    <div class="container d-flex flex-jc-between flex-align-center p-static o-unset{% if section.settings.sticky_header_width == 'full' %} sticky-container-full{% endif %}">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'logo' -%}
+                <div >
+                    <div class="header__heading">
+                        <a href="{{ routes.root_url }}" class="header__heading-link focus-inset">
+                            {%- if block.settings.logo != blank -%}
+                                {%- assign logo = block.settings.logo -%}
+                                {%- assign logo_width = 100 -%}
+                                {%- assign logo_width_img = 100 | append: 'x' -%}
+                                {%- assign logo_width_retina = 200 | times: 2 | append: 'x'  -%}
+                                {%- assign logo_height =  100 | divided_by: logo.aspect_ratio | round -%}
+                                <img srcset="{{ logo | img_url: logo_width_img }}, {{ logo | img_url: logo_width_retina }} 2x" src="{{ logo | img_url: logo_width_img }}" loading="lazy" class="header__heading-logo logo__main w-100 h-auto ver-alg-mid d-inline-block" alt="{{ logo.alt | default: shop.name | escape }}" width="{{ logo_width }}" height="{{ logo_height }}">                        
+                            {%- endif -%}
+                        </a>
+                    </div>
+                </div>
+            {%- when 'main_menu' -%}
+            <div >
+                {%- if block.settings.menu != blank -%}
+                    <nav class="header__inline-menu" data-navigation role="navigation" >
+                        {% render 'halo-navigation-list',
+                            listClass: 'list-menu list-menu--inline'
+                            alignment: block.settings.alignment,
+                            block: block
+                        %}
+                    </nav>
+                {%- endif -%}
+            </div>
+       
+            <div class="shop-menu"> 
+                    {%- if block.settings.show_customer or block.settings.show_customer_sticky -%}
+                        {% if routes.account_login_url contains '/account/login' %}
+                            {% assign is_contained = true %}
+                        {% else %}
+                            {% assign is_contained = false %}
+                        {% endif %}
+                        <a href="{{ routes.account_login_url }}" class="header__icon header__icon--account link link--text link-effect h-100{% if block.settings.show_customer_sticky%}{% if block.settings.show_customer %}{% else %} hide-main-menu{% endif %}{% else %}{% if block.settings.show_customer %} show-main-menu{% endif %}{% endif %} text-center"{% if is_contained %} data-open-auth-sidebar{% endif %}>
+                            <span class="text">{{ 'customer.account.my_account' | t }}</span>
+                        </a> 
+                    {%- endif -%}                              
+                    <a href="{{ routes.cart_url }}" >                  
+                        <span class="">{{ 'templates.cart.cart' | t }}</span>
+                        <div >
+                            {%- if cart.item_count < 100 -%} <span class="text" aria-hidden="true" data-cart-count>{{ cart.item_count }}</span>
+                                {%- endif -%}
+                                <span class="">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                        </div>
+                    </a>
+            </div>
+        {%- endcase -%}
+    {%- endfor -%}
+    </div>
+</div>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": {{ shop.name | json }},
+        {% if logo %}
+            "logo": {{ logo | image_url: width: 500 | prepend: "https:" | json }},
+        {% endif %}    
+        "url": {{ request.origin | append: page.url | json }}
+    }
+</script>
+
+{% schema %}
+{
+    "name": "test",
+    "limit": 1,
+    "class": "section-header-navigation",
+    "settings": [
+        {
+            "type": "select",
+            "id": "sticky_header_type",
+            "label": "t:settings_schema.general.settings.swatch.label__2",
+            "default": "on_scroll",
+            "options": [
+                {
+                    "value": "none",
+                    "label": "t:settings_schema.typography.settings.text_transform.options__1"
+                },
+                {
+                    "value": "always",
+                    "label": "t:sections.header.settings.enable_sticky_header.label_1"
+                },
+                {
+                    "value": "on_scroll",
+                    "label": "t:sections.header.settings.enable_sticky_header.label_2"
+                }
+            ]
+        }
+    ],
+    "blocks": [
+        {
+            "type": "logo",
+            "name": "t:sections.header.settings.header__4.content",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "select",
+                    "id": "logo_position",
+                    "label": "t:sections.header.settings.logo.label__3",
+                    "default": "always",
+                    "options": [
+                        {
+                            "value": "main_menu",
+                            "label": "t:sections.header.settings.navigation.label_5"
+                        },
+                        {
+                            "value": "sticky_menu",
+                            "label": "t:sections.header.settings.navigation.label_6"
+                        },
+                        {
+                            "value": "always",
+                            "label": "t:sections.header.settings.navigation.label_7"
+                        }
+                    ]
+                },
+                {
+                    "type": "image_picker",
+                    "id": "logo",
+                    "label": "t:sections.header.settings.logo.label__1"
+                }
+            ]
+        },
+        {
+            "type": "main_menu",
+            "name": "t:sections.header.settings.menu.label__1",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "link_list",
+                    "id": "menu",
+                    "label": "t:sections.header.settings.menu.label__1",
+                    "default": "main-menu"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "t:sections.header.settings.navigation.name_8",
+            "blocks": [
+                {
+                    "type": "logo"
+                },
+                {
+                    "type": "main_menu"
+                }
+            ]
+        }
+    ],
+    "enabled_on": {
+        "groups": ["header"]
+    }
+}
+{% endschema %}

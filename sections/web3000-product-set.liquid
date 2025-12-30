@@ -1,0 +1,124 @@
+{{ 'web3000-filter.css' | asset_url | stylesheet_tag }}
+
+<section class="web3000-product-set">
+  <div class="web3000-isotope-component web3000-isotope-component--product-grid relative">
+    <div class="wrap--half">
+      <div class="web3000-product-grid web3000-isotope">
+        {% for block in section.blocks %}
+        {% assign product = block.settings.featured_product %}
+          {% assign collection_names = '' %}
+          {% for collection in product.collections %}
+            {% assign collection_names = collection_names | append: collection.title %}
+            {% unless forloop.last %}
+              {% assign collection_names = collection_names | append: ', ' %}
+            {% endunless %}
+          {% endfor %}
+          {% if product.featured_media %}
+            <div class="web3000-isotope__block web3000-isotope__block--product-grid {% if block.settings.double_width %}double-width{% endif %}" data-group="{{ collection_names | handleize }}">
+                {% if block.settings.product_link != blank %}
+                    <a href="{{ block.settings.product_link }}">
+                {% else %}
+                    <div>
+                {% endif %}
+              {% render 'web3000-product-card-manual',
+                  product_card_product: product,
+                  block: block,
+                  portrait_aspect_ratio: 1,
+                  serial: forloop.index,
+                  sectionId: section.id,
+                  media_size: 'square',
+                  hasCountdown: false,
+                  loading: true,
+                  custom_image: block.settings.image,
+                  custom_video: block.settings.video_mp4,
+                  custom_hover_image: block.settings.hover_image,
+                  custom_hover_video: block.settings.hover_video_mp4,
+                  custom_title: block.settings.product_title,
+                  custom_subtitle: block.settings.product_subtitle
+              %}
+              {% if block.settings.product_link != blank %}
+                </a>
+            {% else %}
+                  </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="grid-sizer grid-sizer--product-grid"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "web3000 Products Set",
+  "class": "web3000-product-set-block",
+  "tag": "section",
+  "settings": [
+          ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Product",
+      "limit": 4,
+      "settings": [
+          {
+            "type": "checkbox",
+            "id": "double_width",
+            "label": "Double Width",
+            "default": false
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Front Image"
+          },
+          {
+            "type": "video",
+            "id": "video_mp4",
+            "label": "Front Video mp4 File"
+          },
+          {
+            "type": "image_picker",
+            "id": "hover_image",
+            "label": "Hover Image"
+          },
+          {
+            "type": "video",
+            "id": "hover_video_mp4", 
+            "label": "Hover Video mp4 File"
+          },
+          {
+            "type": "product",
+            "id": "featured_product",
+            "label": "Select a product"
+            },
+          {
+              "type": "url",
+              "id": "product_link",
+              "label": "Product Link"
+          },
+          {
+            "type": "text",
+            "id": "product_title", 
+            "label": "Title (optional)"
+          },
+          {
+            "type": "text",
+            "id": "product_subtitle",
+            "label": "Subtitle (optional)"
+          }
+
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "web3000 Products Set"
+    }
+  ]
+}
+{% endschema %}

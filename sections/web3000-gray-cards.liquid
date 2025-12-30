@@ -1,0 +1,215 @@
+{{ 'web3000-filter.css' | asset_url | stylesheet_tag }}
+{{ 'web3000-faqs.css' | asset_url | stylesheet_tag }}
+
+<div class="web3000-gray-cards cols-{{ section.settings.columns }}">
+  <div class="web3000-isotope-component web3000-isotope-component--faq">
+
+    <div class="wrap--half">
+      <div class="web3000-faqs web3000-isotope">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'paragraph' -%}
+              {%- for i in (1..10) -%}
+                {% capture cap_question %}question_{{ i }}{% endcapture %}
+                {% capture cap_answer %}answer_{{ i }}{% endcapture %}
+
+                {%- liquid
+                  assign question = block.settings[cap_question]
+                  assign answer = block.settings[cap_answer]
+                  assign title = block.settings.title
+                -%}
+
+                {%- if question != blank -%}
+                  <div class="web3000-faqs__block web3000-isotope__block web3000-isotope__block--faq" data-group="{{ title | handleize }}">
+                    <div class="web3000-faqs__block-inner entry-content">
+                      <div class="card" id="#accordion-{{ block.id }}-{{ forloop.index }}">
+                        <div
+                          class="card-header collapsed pb-paragraph"
+                          id="question-{{ block.id }}-{{ forloop.index }}"
+                          data-toggle="collapse"
+                          data-target="#collapse-{{ block.id }}-{{ forloop.index }}"
+                          aria-expanded="true"
+                          aria-controls="collapse-{{ block.id }}-{{ forloop.index }}">
+                          <div
+                            class="title"
+                            role="button"
+                            tabindex="0">
+                            {{ question }}
+                          </div>
+                          <span class="icon-plus arrow" role="none"></span>
+                        </div>
+                        <div
+                          id="collapse-{{ block.id }}-{{ forloop.index }}"
+                          class="collapse"
+                          data-parent="#accordion">
+                          <div class="entry-content card-body bold-underline" id="answer-{{ block.id }}-{{ forloop.index }}">
+                            {{ answer }}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+          {%- endcase -%}
+        {%- endfor -%}
+        <div class="grid-sizer grid-sizer--faq"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'isotope.js' | asset_url }}" defer></script>
+<script src="{{ 'web3000-isotope.js' | asset_url }}" defer></script>
+
+
+{% schema %}
+  {
+    "name": "web3000 Gray Cards",
+    "class": "web3000-gray-cards-block",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "select",
+        "id": "columns",
+        "label": "Number of Columns",
+        "default": "3",
+        "options": [
+          {
+            "value": "3",
+            "label": "3 Columns"
+          },
+          {
+            "value": "4",
+            "label": "4 Columns"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "paragraph",
+        "name": "t:sections.main_faqs.blocks.paragraph.name",
+        "settings": [
+          {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__2"
+          },
+          {
+            "type": "text",
+            "id": "question_1",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_1",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__3"
+          }, {
+            "type": "text",
+            "id": "question_2",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_2",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__4"
+          }, {
+            "type": "text",
+            "id": "question_3",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_3",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__5"
+          }, {
+            "type": "text",
+            "id": "question_4",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_4",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__6"
+          }, {
+            "type": "text",
+            "id": "question_5",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_5",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__7"
+          }, {
+            "type": "text",
+            "id": "question_6",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_6",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__8"
+          }, {
+            "type": "text",
+            "id": "question_7",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_7",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__9"
+          }, {
+            "type": "text",
+            "id": "question_8",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_8",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__10"
+          }, {
+            "type": "text",
+            "id": "question_9",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_9",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }, {
+            "type": "header",
+            "content": "t:sections.main_faqs.blocks.paragraph.settings.header__11"
+          }, {
+            "type": "text",
+            "id": "question_10",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__1"
+          }, {
+            "type": "richtext",
+            "id": "answer_10",
+            "label": "t:sections.main_faqs.blocks.paragraph.settings.question.label__2"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 Gray Cards"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,87 @@
+{{ 'web3000-filter.css' | asset_url | stylesheet_tag }}
+
+<section>
+  <div class="web3000-isotope-component web3000-isotope-component--product-grid">
+    <div class="wrap">
+      <div class="web3000-filter-panel">
+        {%- if section.settings.title != blank -%}
+          <h1 class="">
+            {{ section.settings.title | escape }}
+          </h1>
+        {%- endif -%}
+        <div class="web3000-filter-button-wrapper">
+          {%- for collection in collections -%}
+            {%- if collection.products_count >= 1 -%}
+              <button
+                class="web3000-filter-button"
+                type="button"
+                data-value="{{ collection.title | handleize }}">
+                <div class="web3000-filter-button-checkbox"></div>
+                <span class="text">{{ collection.title | escape }}</span>
+              </button>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap--half">
+      <div class="web3000-product-grid web3000-isotope">
+        {% for product in collections.all.products %}
+          {% assign collection_names = '' %}
+          {% for collection in product.collections %}
+            {% assign collection_names = collection_names | append: collection.title %}
+            {% unless forloop.last %}
+              {% assign collection_names = collection_names | append: ', ' %}
+            {% endunless %}
+          {% endfor %}
+          {% if product.featured_media %}
+            <div class="product-item web3000-isotope__block web3000-isotope__block--product-grid" data-group="{{ collection_names | handleize }}">
+              <div
+                class="product{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.banner_animation == 'effect_fade_up' %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+                {% endif %}>
+                {% render 'web3000-product-grid-layout'
+                  , product_card_product: product
+                  , serial: forloop.index
+                  , sectionId: section.id
+                  , show_list: true
+                  , loading: true
+                %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="grid-sizer grid-sizer--product-grid"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="{{ 'isotope.js' | asset_url }}" defer></script>
+<script src="{{ 'web3000-isotope.js' | asset_url }}" defer></script>
+
+{% schema %}
+  {
+    "name": "web3000 Product Grid",
+    "class": "web3000-product-grid-block",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "All Products",
+        "default": "All Products"
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 Product Grid"
+      }
+    ]
+
+  }
+{% endschema %}

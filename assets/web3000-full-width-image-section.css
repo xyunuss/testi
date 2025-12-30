@@ -1,0 +1,27 @@
+.web3000-full-width-image__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: var(--desktop-max-text-width);
+	color: var(--color-text-white);
+	padding: 1em;
+	text-align: center;
+}
+
+.web3000-full-width-image .no-cropping img {
+	object-fit: contain;
+	height: auto;
+	width: 100%;
+}
+
+.web3000-full-width-image .cropping img {
+	object-fit: cover;
+	height: 100svh;
+	width: 100%;
+}
+
+.web3000-full-width-image-video__caption p {
+	margin: 1em auto 0;
+}

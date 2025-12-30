@@ -1,0 +1,12 @@
+.account-page.login-page {
+    min-height: calc(100vh - 32em);
+}
+
+.web3000-login-title {
+	font-size: var(--font-body-size);
+	margin-bottom: 0.5rem;
+}
+
+.account-page.login-page label {
+    display: none;
+}

@@ -1,0 +1,77 @@
+{{ 'web3000-recycling.css' | asset_url | stylesheet_tag }}
+
+<section class="recycling-wrapper wrap relative">
+    <h1 class="page-title recycling-title">{{ page.title }}</h1>
+    <div class="web3000-recycling-cards">
+      <div class="web3000-recycling-card web3000-recycling-card--image">
+      {%- if section.settings.product_image -%}
+        <img src="{{ section.settings.product_image | img_url: 'master' }}"
+             srcset="{{ section.settings.product_image | img_url: '300x' }} 300w,
+                     {{ section.settings.product_image | img_url: '600x' }} 600w,
+                     {{ section.settings.product_image | img_url: '900x' }} 900w,
+                     {{ section.settings.product_image | img_url: '1200x' }} 1200w,
+                     {{ section.settings.product_image | img_url: '1500x' }} 1500w,
+                     {{ section.settings.product_image | img_url: '1800x' }} 1800w,
+                     {{ section.settings.product_image | img_url: '2000x' }} 2000w,
+                     {{ section.settings.product_image | img_url: '2500x' }} 2500w"
+             sizes="(min-width: 1024px) 50vw, 100vw"
+             alt="{{ section.settings.product_image.alt | escape }}"
+             width="{{ section.settings.product_image.width }}"
+             height="{{ section.settings.product_image.height }}"
+             loading="lazy">
+      {%- endif -%}
+      </div>
+      <div class="web3000-recycling-card web3000-recycling-card__text entry-content">
+        {{ section.settings.recycling_text }}
+        <div class="web3000-recycling-icons">
+          {%- for block in section.blocks -%}
+            <img src="{{ block.settings.recycling_icon | img_url: 'master' }}"
+               alt="{{ block.settings.recycling_icon.alt | escape }}"
+               width="{{ block.settings.recycling_icon.width }}"
+               height="{{ block.settings.recycling_icon.height }}"
+               loading="lazy">
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "web3000 Recycling Cards",
+    "class": "web3000-recycling-block",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "product_image",
+        "label": "Product Image"
+      },
+      {
+        "type": "richtext",
+        "id": "recycling_text",
+        "label": "Recycling Text"
+      }
+
+    ],
+    "blocks": [
+      {
+        "type": "recycling_icon",
+        "name": "Recycling Icon",
+        "settings": [
+          {
+            "type": "image_picker", 
+            "id": "recycling_icon",
+            "label": "Recycling Icon"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 Recycling Cards"
+      }
+    ]
+  }
+{% endschema %}

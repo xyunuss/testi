@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "web3000_video_qjPLwY": {
+      "type": "web3000-video",
+      "settings": {
+        "autoplay": true,
+        "bg_black": false,
+        "full_width_video": false,
+        "landing_video": false,
+        "video_mp4": "shopify://files/videos/241010_HSL_ECom_18LipstickRed_16x9.mp4",
+        "video_mp4_mobile": "shopify://files/videos/HATICESCHMIDTLABS_LIPSTICKS_CARDINALFLAME_MARIKA.mp4",
+        "url_mp4": ""
+      }
+    }
+  },
+  "order": [
+    "web3000_video_qjPLwY"
+  ]
+}

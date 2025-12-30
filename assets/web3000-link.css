@@ -1,0 +1,7 @@
+.web3000-link-underline {
+	text-decoration: underline;
+}
+
+.web3000-link-gray {
+	color: var(--color-text-lightGray-2);
+}

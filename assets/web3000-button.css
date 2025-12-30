@@ -1,0 +1,32 @@
+.web3000-button {
+	background-color: var(--color-bg-black);
+	color: var(--color-text-white);
+	border: none;
+	cursor: pointer;
+	font-size: var(--font-body-size);
+}
+
+.web3000-button--white {
+	background-color: var(--color-bg-white) !important;
+	color: var(--color-text-black) !important;
+}
+
+.web3000-button--large {
+	height: var(--input-height);
+}
+
+.web3000-button--small {
+	padding: var(--small-button-padding);
+}
+
+.web3000-button--full-w {
+	width: 100%;
+}
+.web3000-button--login,
+.web3000-button--login-full-w {
+	width: 100%;
+}
+
+.web3000-button--add-new-address {
+	margin-bottom: 5rem;
+}

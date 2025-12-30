@@ -1,0 +1,9 @@
+{% comment %} <script src="{{ 'midnight.jquery.min.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'web3000-swiper.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+{% comment %} <script src="{{ 'themecustom.js' | asset_url }}" defer="defer"></script> {% endcomment %}
+
+{%- if settings.show_calculator_free_shipping_message -%}
+  <script src="{{ 'free-shipping-message.js' | asset_url }}" defer="defer"></script>
+{% endif %}

@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "web3000_main_faqs_page_WFM6rh": {
+      "type": "web3000-main-faqs-page",
+      "blocks": {
+        "paragraph_i9LDfA": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Bestellung",
+            "question_1": "Welche Zahlungsarten sind bei haticeschmidt.com möglich?",
+            "answer_1": "<p>Folgende Zahlungsmöglichkeiten bieten wir an: PayPal, Klarna (Rechnung, Ratenkauf, Sofort), Kreditkarte (VISA, Mastercard, American Express, Maestro, UnionPay Japan), Apple Pay, Google Pay, Bancontact, eps, iDeal.</p><p>Bitte beachte, dass nicht alle Zahlungsmethoden für jedes Land zur Verfügung stehen. Weitere Informationen dazu findest du auf der Seite \"<a href=\"https://bfa686-b2.myshopify.com/pages/zahlungsinformationen\" target=\"_blank\">Zahlungsinformationen</a>\". </p>",
+            "question_2": "Kann ich eine Bestellung nachträglich ändern?",
+            "answer_2": "<p>Um schnellen Versand garantieren zu können, wird deine Bestellung direkt nach dem Bestelleingang versandfertig gemacht. Aus diesem Grund können wir nachträglich keine Änderungen mehr vornehmen.</p>",
+            "question_3": "Kann ich bestellte Produkte umtauschen?",
+            "answer_3": "<p>Ein Umtausch ist leider nicht möglich. Du hast jedoch die Möglichkeit von deinem Widerrufsrecht Gebrauch zu machen und das Produkt unbenutzt und in Originalverpackung <strong>innerhalb von 14 Tagen nach fristgemäßem Verbraucherwiderruf</strong> auf eigene Kosten an uns zurück zu senden (gilt nur innerhalb der EU). Alle Informationen dazu findest du in unserer “<a href=\"https://bfa686-b2.myshopify.com/policies/refund-policy\" target=\"_blank\">Widerrufsbelehrung</a>” und im FAQ-Bereich “Rücksendung”.Das gewünschte Produkt kannst du dann in einer separaten Order neu bestellen. </p>",
+            "question_4": "Wie verhalte ich mich bei einer Reklamation?",
+            "answer_4": "<p>Sollte deine Bestellung beschädigt bei dir ankommen, dokumentiere zuerst den Schaden mit Hilfe von Fotos oder Videos. Kontaktiere uns dann umgehend unter <a href=\"mailto:support@haticeschmidtlabs.com\" target=\"_blank\">service@haticeschmidt.com</a> mit einer Beschreibung des Reklamationsfalles inkl. Fotos/Videos, auf denen der Schaden deutlich zu erkennen ist. In manchen Fällen muss das Produkt zur weiteren Qualitätskontrolle an uns zurückgeschickt werden. Wir werden deine Anfrage bearbeiten und uns schnellstmöglich zurückmelden.</p>",
+            "question_5": "Wie kann ich eine aufgegebene Bestellung stornieren?",
+            "answer_5": "<p>Die Möglichkeit, deine Bestellung zu stornieren, hängt vom jeweiligen Status deiner Bestellung ab.</p><p><strong>Bestellung wurde noch nicht versendet: </strong>Bitte beachte, dass in den meisten Fällen eine Stornierung vor dem Versand nicht mehr möglich, da wir deine Bestellung direkt nach dem Eingang bearbeiten und in den Versand geben, um so eine schnelle Lieferung garantieren zu können. Solange der Auftrag aber noch nicht bearbeitet wurde, können wir die Bestellung ganz oder teilweise stornieren. Wende dich dafür schnellstmöglich an uns unter <a href=\"mailto:support@haticeschmidtlabs.com\" target=\"_blank\" title=\"mailto:support@haticeschmidtlabs.com\">service@haticeschmidt.com</a> und gib dazu deine Auftrags-Nr. an. </p><p></p><p><strong>Bestellung wurde bereits versendet: </strong>In diesem Fall kannst du deine Bestellung nur stornieren, indem du <strong>innerhalb von 14 Tagen nach Erhalt der Sendung </strong>von deinem Widerrufsrecht Gebrauch machst. Genaue Informationen dazu findest Du in unserer “<a href=\"https://bfa686-b2.myshopify.com/policies/refund-policy\" target=\"_blank\">Widerrufsbelehrung</a>” und im FAQ-Bereich “Rücksendung”.</p>",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_eXMt3a": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Versand und Lieferung",
+            "question_1": "In welche Länder können Produkte von HATICE SCHMIDT verschickt werden?",
+            "answer_1": "<p>Wir bieten internationalen Versand an. Die genaue Auflistung der Länder kannst du der Seite \"<a href=\"https://bfa686-b2.myshopify.com/pages/versandinformationen\" target=\"_blank\">Versandkosten & -informationen</a>\" entnehmen.</p>",
+            "question_2": "Mit welchem Lieferdienst wird mein Paket verschickt?",
+            "answer_2": "<p>Der Versand erfolgt aktuell mit DHL und Deutsche Post (Warenpost inkl. Sendungsnummer). Weitere Informationen dazu findest du auf der Seite \"<a href=\"https://bfa686-b2.myshopify.com/pages/versandinformationen\" target=\"_blank\">Versandkosten & -informationen</a>\".</p>",
+            "question_3": "Wie hoch sind die Versandkosten?",
+            "answer_3": "<p>Unsere Versandkosten für den nationalen und internationalen Versand kannst du der Seite \"<a href=\"https://bfa686-b2.myshopify.com/pages/versandinformationen\" target=\"_blank\">Versandkosten & -informationen</a>\" entnehmen. </p><p>Im Nicht-EU-Ausland (auch Schweiz und Norwegen) können im Rahmen deiner Bestellung zusätzlich noch Steuern oder Kosten wie z.B. Zölle anfallen. Die Zollgebühren sind länderspezifisch und hängen von der Höhe deiner Bestellung ab. Sie werden nicht über uns abgeführt bzw. können von uns nicht in Rechnung gestellt werden, sondern sind von dir direkt an die zuständigen Zoll- oder Steuerbehörden zu entrichten.</p>",
+            "question_4": "Wann erhalte ich meine Bestellung?",
+            "answer_4": "<p>Die genaue Versanddauer wird dir je nach Versandart und Lieferland im Bestellprozess an der Kasse angezeigt. Innerhalb Deutschlands und mit Eingang deiner Zahlung, sollte dein Paket innerhalb von 1-3 Tagen versendet werden. Bei hohem Bestellaufkommen kann es jedoch zu Verzögerungen kommen.</p><p>Bitte beachte, dass bei Sendungen ins Ausland der exakte Liefertermin aufgrund von internationalen Bestimmungen und längeren Versandwegen nicht genau im Voraus angegeben werden kann. Bei Fragen dazu wende dich direkt an unser <a href=\"https://haticeschmidt.com/pages/kontakt\" target=\"_blank\" title=\"https://haticeschmidt.com/pages/kontakt\">Service Team</a>.</p>",
+            "question_5": "Kann mein Paket an eine DHL Packstation verschickt werden?",
+            "answer_5": "<p>Wir können dein Paket an eine DHL Packstation innerhalb Deutschlands versenden. Wähle dafür im Feld \"Adresse, Packstation\" eine Packstation deiner Wahl aus und trage deine Postnummer (deine persönliche Kundennummer) in das dafür vorgesehene Feld ein.</p>",
+            "question_6": "Kann ich meine Bestellung nachverfolgen?",
+            "answer_6": "<p>Mit deiner Versandbestätigung erhältst du einen Trackinglink, mit dem du den Status deiner Sendung abrufen kannst. Wir empfehlen den zugeschickten Link regelmäßig zu prüfen, damit du über den aktuellen Versandstatus deines Paketes immer informiert bist.</p>",
+            "question_7": "Meine Bestellung ist nie bei mir angekommen. Was kann ich tun?",
+            "answer_7": "<p>Falls du dein Paket nicht erhalten hast, obwohl die Sendung beim Versanddienstleister als zugestellt erscheint, benötigen wir von dir einige Angaben zu deiner Bestellung in Form einer Erklärung über den Nichterhalt der Sendung, welche wir dir als Formular zusenden werden. Wende dich dafür an unser <a href=\"https://haticeschmidt.com/pages/kontakt\" target=\"_blank\" title=\"https://haticeschmidt.com/pages/kontakt\">Service Team</a>. Mit deinen Angaben können wir den Transportdienstleister kontaktieren und die notwendigen Nachforschungen veranlassen.</p>",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_KAAp87": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Rücksendung",
+            "question_1": "Wie kann ich Produkte zurück schicken?",
+            "answer_1": "<p><strong>Alle auf </strong><a href=\"http://www.haticeschmidtlabs.com/\" target=\"_blank\"><strong>www.haticeschmidt.com</strong></a><strong> erworbenen Produkte können ohne Angabe von Gründen, jedoch unbenutzt und in Originalverpackung innerhalb von 14 Tagen nach </strong><a href=\"https://bfa686-b2.myshopify.com/policies/refund-policy\" target=\"_blank\"><strong>fristgemäßem Verbraucherwiderruf </strong></a><strong>zurückgesendet werden*. Die Kosten für den Rückversand werden dabei vom Käufer selbst getragen. </strong></p><p><strong>Für eine schnelle Bearbeitung und Erstattung beachte folgende Schritte:</strong></p><p>Bei Kosmetikprodukten handelt es sich um Hygieneartikel. Die Ware muss sich in einem vollständigen und ungebrauchten Zustand befinden - ansonsten können wir keine Erstattung gewährleisten.</p><p>Bitte sende die Ware versichert (als Paket inkl. Sendungsnummer) zurück. Nutze dafür das vorausgefüllte Versandlabel, welches Du unter diesem Link kaufen kannst: <a href=\"https://www.dhl.de/de/privatkunden/pakete-versenden/online-frankieren.html?type=RetoureLandingPage&rosyId=5b580bbc4b1244ca90fabb7c98757664\" target=\"_blank\"><strong>DHL Retourenlabel</strong></a>.</p><p>Kennzeichne die Lieferung mit dem Vermerk „Rücksendung“ und deiner Auftrags-Nr.</p><p>Falls Du das Retourenlabel nicht nutzen möchtest, schicke deine Rücksendung an folgende Adresse: <em>Hatice Schmidt GmbH, Schönstedtstraße 7, 12043 Berlin, Deutschland</em>.</p><p><strong>Allgemeine Hinweise zur Rücksendung:</strong></p><p>Bitte vermeide Beschädigungen und Verunreinigungen der Ware. Sende die Ware in Originalverpackung mit sämtlichem Zubehör und mit allen Verpackungsbestandteilen an uns zurück. Verwende ggf. eine schützende Umverpackung. Wenn du die Originalverpackung nicht mehr besitzt, sorge bitte mit einer geeigneten Verpackung für einen ausreichenden Schutz vor Transportschäden.Sende die Ware bitte nicht unfrei an uns zurück. In diesem Fall können wir deine Rücksendung nicht annehmen. </p><h6>* gilt nur innerhalb der EU</h6>",
+            "question_2": "Wie erfolgt die Rückerstattung?",
+            "answer_2": "<p>In der Regel erfolgt die Rückzahlung des Betrages innerhalb von 7 Tagen nach Erhalt der Rücksendung auf das bei der Zahlung verwendete Konto. Kosten für den Rückversand werden von uns nicht übernommen.</p>",
+            "question_3": "",
+            "answer_3": "",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_Vtqj4U": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Produktinformationen",
+            "question_1": "Sind eure Produkte vegan?",
+            "answer_1": "<p>Wir legen großen Wert darauf, dass jedes Produkt ohne tierische Bestandteile produziert wird. Deshalb ist unsere gesamte Produktkollektion ausschließlich vegan. </p>",
+            "question_2": "Werden eure Produkte an Tieren getestet?",
+            "answer_2": "<p>Unsere Produkte werden <strong>nicht</strong> an Tieren getestet. Allgemein sind Tierversuche in der EU gem. Art. 18 VO (EG) 1223/2009 verboten. Deshalb dürfen kosmetische Produkte und alle deren Bestandteile nicht an Tieren getestet werden.</p>",
+            "question_3": "Wie lange kann ich meine HATICE SCHMIDT Produkte verwenden?",
+            "answer_3": "<p>Einen Hinweis hierzu findest du auf der jeweiligen Produktverpackung. Schau dafür nach dem Symbol eines offenen Cremetiegels. Die Zahl mit dem Buchstaben M gibt die Mindesthaltbarkeit in Monaten nach dem Öffnen des Produktes an.</p>",
+            "question_4": "Wo kann ich HATICE SCHMIDT Produkte kaufen?",
+            "answer_4": "<p>Aktuell kannst du unsere Produkte exklusiv auf <a href=\"http://www.haticeschmidt.com/\" target=\"_blank\">haticeschmidt.com</a> kaufen. </p>",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        },
+        "paragraph_brCiHE": {
+          "type": "paragraph",
+          "settings": {
+            "title": "Kundenkonto",
+            "question_1": "Welche Vorteile hat das Anlegen eines Kundenkontos bei HATICE SCHMIDT?",
+            "answer_1": "<p>Wir bieten dir die Speicherung deiner persönlichen Daten in einem passwortgeschützten Kundenkonto an. Dort kannst du deine Adress- & Zahlungsdaten hinterlegen und alle Deine Bestellungen & Retouren im Überblick behalten. </p>",
+            "question_2": "Wie kann ich ein Kundenkonto anlegen?",
+            "answer_2": "<p>Du kannst ein Kundenkonto auf <a href=\"http://haticeschmidt.com\" target=\"_blank\">haticeschmidt.com</a> erstellen, indem du oben rechts auf \"Mein Konto\" klickst.</p><p>Bitte beachte: durch das Abonnieren des Newsletters wird <strong>kein</strong> Kundenkonto erstellt.</p>",
+            "question_3": "Was kann ich tun, wenn ich mein Passwort vergessen habe?",
+            "answer_3": "<p>Falls du das Passwort für dein Kundenkonto vergessen hast, dann geh oben rechts auf \"Mein Konto\". Im Anmeldefenster hast du die Möglichkeit auf \"Passwort vergessen?\" zu klicken. Wir benötigen dann deine Email-Adresse, mit der du das Kundenkonto angelegt hast und senden dir eine separate E-Mail zum Zurücksetzen des alten Passwortes. Klicke auf den Link in der E-Mail und du kannst ein neues persönliches Passwort für dein Kundenkonto anlegen.</p>",
+            "question_4": "Mein Kundenkonto ist gesperrt. Was kann ich tun?",
+            "answer_4": "<p>Sollte dein Kundenkonto gesperrt sein, wende dich an unser <a href=\"https://haticeschmidt.com/pages/kontakt\" target=\"_blank\" title=\"https://haticeschmidt.com/pages/kontakt\">Service Team</a> und wir helfen dir weiter.</p>",
+            "question_5": "Wie kann ich mein Kundenkonto löschen?",
+            "answer_5": "<p>Du kannst dein Kundenkonto jederzeit wieder löschen. Melde dich dafür mit deiner Kunden-Nr. bei unserem <a href=\"https://haticeschmidt.com/pages/kontakt\" target=\"_blank\" title=\"https://haticeschmidt.com/pages/kontakt\">Service Team</a> und wir löschen deine Daten DSGVO-konform. </p>",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_i9LDfA",
+        "paragraph_eXMt3a",
+        "paragraph_KAAp87",
+        "paragraph_Vtqj4U",
+        "paragraph_brCiHE"
+      ],
+      "settings": {
+        "title": "Q&A - Häufig gestellte Fragen"
+      }
+    }
+  },
+  "order": [
+    "web3000_main_faqs_page_WFM6rh"
+  ]
+}

@@ -1,0 +1,124 @@
+@media screen and (min-width: 1024px) {
+	.web3000-addresses-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: var(--grid-gap);
+	}
+}
+
+.web3000-addresses-list-item {
+	background-color: var(--address-box-bg-color);
+	color: var(--color-text-lightGray-2);
+	padding: 1rem;
+	position: relative;
+	font-size: var(--font-body-size);
+}
+
+.web3000-addresses-list-item--default {
+	border: var(--color-text-lightGray-2) 1px solid;
+}
+
+@media screen and (min-width: 1024px) {
+	.web3000-addresses-list-item {
+		min-height: 12rem;
+		display: flex;
+		flex-direction: column;
+		place-content: center;
+	}
+}
+
+.web3000-addresses-max-w {
+	display: grid;
+	row-gap: var(--grid-gap);
+}
+
+.web3000-addresses-max-w .web3000-addresses-list-item,
+.web3000-button--add-new-address,
+.web3000-addresses-pagination,
+.address-form .form-field input,
+.address-form .form-field .select__select,
+.address-form .form-actions {
+	max-width: 450px;
+}
+
+@media screen and (min-width: 1024px) {
+	.web3000-addresses-max-w .web3000-addresses-list-item {
+		min-height: 17rem;
+	}
+}
+
+.web3000-address-content {
+	font-style: normal;
+}
+
+.web3000-address-content .acc-name {
+	color: var(--color-text-black);
+	text-transform: uppercase;
+	font-style: normal;
+}
+
+.web3000-address-content .cus-addr:not(:last-child):not(:first-child):after {
+	content: ", ";
+}
+
+.web3000-default-address {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-transform: uppercase;
+}
+
+.web3000-address-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.web3000-address-button {
+	background-color: transparent;
+}
+.web3000-address-page-grid {
+	display: flex;
+	flex-direction: column;
+}
+
+.web3000-address-page-grid > div:nth-child(2) {
+	order: 1;
+}
+
+.web3000-address-page-grid > div:first-child {
+	order: 2;
+}
+
+@media screen and (min-width: 1024px) {
+	.web3000-address-page-grid {
+		flex-direction: row;
+	}
+
+	.web3000-address-page-grid > div:first-child {
+		order: 1;
+	}
+
+	.web3000-address-page-grid > div:nth-child(2) {
+		order: 2;
+	}
+}
+
+.web3000-address-new {
+	display: flex;
+	gap: var(--grid-gap);
+	margin-bottom: 5rem;
+}
+
+.web3000-address-new a {
+	text-align: right;
+}
+
+@media screen and (min-width: 1024px) {
+	.web3000-address-new {
+		margin-bottom: 7rem;
+	}
+	.web3000-address-new a {
+		text-align: left;
+	}
+}

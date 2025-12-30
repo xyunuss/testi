@@ -1,0 +1,102 @@
+{{ 'web3000-collection.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'web3000-filter.css' | asset_url | stylesheet_tag: preload: true }}
+
+{% if section.settings.collection_title or section.settings.collection_subtitle %}
+  <div class="web3000-collection-title-wrapper">
+    {% if section.settings.collection_title %}
+          <div class="web3000-collection__title">{{ section.settings.collection_title }}</div>
+        {% endif %}
+    {% if section.settings.collection_subtitle %}
+          <div class="web3000-collection__subtitle">{{ section.settings.collection_subtitle }}</div>
+      {% endif %}
+  </div>
+{% endif %}
+<div class="wrap--half web3000-isotope-component web3000-isotope-component--collection web3000-collection-products">
+  <div class="web3000-isotope">
+    <div class="grid-sizer grid-sizer--collection"></div>
+      {% for block in section.blocks %}
+        {% if block.settings.product_link != blank %}
+            <a class="web3000-collection__block web3000-isotope__block web3000-isotope__block--collection" href="{{ block.settings.product_link }}">
+        {% else %}
+            <div class="web3000-collection__block web3000-isotope__block web3000-isotope__block--collection">
+        {% endif %}
+          {% if block.settings.image != blank %}
+          <div class="web3000-collection__images">
+            {% render 'image' with 
+              image: block.settings.image,
+              class_name: 'web3000-collection__image'
+            %}
+            <div class="web3000-collection__images-text">{{ 'web3000.see_more' | t }}</div>
+          </div>
+          {% endif %}
+          {% if block.settings.product_title != blank %}
+          <div>{{ block.settings.product_title }}</div>
+          {% endif %}
+          {% if block.settings.color != blank %}
+          <div class="web3000-collection__product-color">{{ block.settings.color }} &nbsp;</div>
+          {% endif %}
+        {% if block.settings.product_link != blank %}
+            </a>
+        {% else %}
+              </div>
+          {% endif %}
+        {% endfor %}
+  </div>
+</div>
+
+<script src="{{ 'isotope.js' | asset_url }}" defer></script>
+<script src="{{ 'web3000-collection.js' | asset_url }}" defer></script>
+<script src="{{ 'web3000-isotope.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "web3000 Collection",
+  "class": "web3000-collection-block",
+  "tag": "section",
+  "settings": [
+          {
+            "type": "text",
+            "id": "collection_title",
+            "label": "Title"
+          },
+          {
+            "type": "text",
+            "id": "collection_subtitle",
+            "label": "Subtitle"
+          }
+          ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Product",
+      "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+              "type": "url",
+              "id": "product_link",
+              "label": "Product Link"
+          },
+          {
+              "type": "text",
+              "id": "product_title",
+              "label": "Product Title"
+          },
+          {
+              "type": "text",
+              "id": "color",
+              "label": "Color Description"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "web3000 Collection"
+    }
+  ]
+}
+{% endschema %}

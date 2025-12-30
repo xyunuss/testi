@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+	"sections": {
+		"web3000_legal_6gLAag": {
+			"type": "web3000-legal",
+			"blocks": {
+				"group_iPbRx3": {
+					"type": "group",
+					"settings": {
+						"text": "Cookie Management Information",
+						"anchor": "cookies",
+						"content": "<p>1.1   Cookie Management</p><p>We will retain your personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation to the different purposes of the data processed. In addition to the retention time stated in section 3, please note the following. Your personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation.</p><p></p><p>1.2   Hatice Schmidt</p><p>We will retain your personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time.\u2028</p><p></p><p>1.3   Who sends cookies?</p><p>We will retain your personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation to the different purposes of the data processed. In addition to the retention time stated in section 3, please note the following.</p><p></p><p>1.4  How long Do We store user Data?</p><p>Personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation to the different purposes of the data processed. In addition to the retention time stated in section 3, please note the following.</p>"
+					}
+				},
+				"group_dd4RU4": {
+					"type": "group",
+					"settings": {
+						"text": "",
+						"anchor": "",
+						"content": ""
+					}
+				},
+				"group_qJDrLx": {
+					"type": "group",
+					"settings": {
+						"text": "Privacy Policy",
+						"anchor": "privacypolicy",
+						"content": "<p>2.1 Privacy Policy - Hatice Schmidt</p><p>We will retain your personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation to the different purposes of the data processed. In addition to the retention time stated in section 3, please note the following. Your personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation.</p><p>2.2   Hatice Schmidt</p><ul><li>Order</li><li>Legality</li><li>Back \u2028</li></ul><p>2.3   How long Do We store user Data?</p><p>We will retain your personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation to the different purposes of the data processed. In addition to the retention time stated in section 3, please note the following.</p><p>2.4  How long Do We store user Data?</p><p>Personal information for as long as necessary in relation to the purposes for which the data was collected or otherwise processed. In section 3 above, we have specified the retention times, or criteria for determining the retention time, for our data processing in relation to the different purposes of the data processed. In addition to the retention time stated in section 3, please note the following.</p>"
+					}
+				}
+			},
+			"block_order": ["group_iPbRx3", "group_dd4RU4", "group_qJDrLx"],
+			"settings": {}
+		}
+	},
+	"order": ["web3000_legal_6gLAag"]
+}

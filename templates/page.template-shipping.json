@@ -1,0 +1,70 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "web3000_legal_6gLAag": {
+      "type": "web3000-legal",
+      "blocks": {
+        "group_iPbRx3": {
+          "type": "group",
+          "settings": {
+            "text": "Versandkosten und -informationen",
+            "anchor": "shipping",
+            "content": "<p>Der Versand ist standardmäßig nur in die unten aufgeführten Länder möglich. Falls dein Land nicht aufgelistet ist, erfolgt die Prüfung der Versandmöglichkeiten auf Anfrage. Kontaktiere uns dafür per E-Mail an <a href=\"mailto:service@haticeschmidt.com\" target=\"_blank\">service@haticeschmidt.com</a>.</p><p>Der Versand erfolgt mit <strong>DHL</strong> und <strong>Deutsche Post </strong>Warenpost inkl. Sendungsnummer. Die Versandarten, Lieferzeiten und anfallende Versandkosten je Land kannst du der unten angegebenen Tabelle entnehmen.</p><p>Bitte beachte, dass bei Sendungen ins Ausland der genaue Liefertermin aufgrund von internationalen Bestimmungen und längeren Versandwegen im Voraus nicht exakt angegeben werden kann. Auch beim zollpflichtigen Warenversand sind längere Laufzeiten möglich.</p><p>Beim Versand in Länder außerhalb der Europäischen Union können außerdem zusätzlich noch weitere Steuern oder Kosten wie z.B. Zölle anfallen. Diese werden nicht über uns abgeführt bzw. können von uns nicht in Rechnung gestellt werden, sondern sind direkt an die zuständigen Zoll- oder Steuerbehörden zu entrichten.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "group_iPbRx3"
+      ],
+      "settings": {}
+    },
+    "web3000_gray_cards_xarFXP": {
+      "type": "web3000-gray-cards",
+      "blocks": {
+        "paragraph_mjyF8j": {
+          "type": "paragraph",
+          "settings": {
+            "question_1": "DEUTSCHLAND",
+            "answer_1": "<p>Versand mit DHL: 4,95€. Lieferzeit: 1-3 Werktage. </p><p>Versandkostenfrei für alle Bestellungen ab 79€. </p>",
+            "question_2": "EUROPA",
+            "answer_2": "<p>Länder: Türkei, Andorra, Island, Liechtenstein, Serbien, Norwegen, Schweiz, Albanien, Belarus, Färöer, Kasachstan, Österreich, Belgien, Kroatien, Tschechien, Dänemark, Estland, Finnland, Frankreich, Griechenland, Ungarn, Irland, Italien, Lettland, Litauen, Luxemburg, Malta, Monaco, Niederlande, Polen, Portugal, Slowakei, Slowenien, Spanien, Schweden, Russland, Zypern.</p><p><br/>Versand mit Deutsche Post Warenpost: 4,95€. Lieferzeit: 6-16 Werktage. </p><p>Versand mit DHL: 14,95€. Lieferzeit: 4-15 Werktage. </p><p>Versandkostenfrei für alle Bestellungen ab 120€. </p>",
+            "question_3": "INTERNATIONAL",
+            "answer_3": "<p>Länder: Australien, Kanada, Hongkong, Japan, Malaysia, Neuseeland, Singapur, Südkorea, VAE, Ägypten, China, Jemen, Kambodscha, Oman, Thailand.</p><p><br/>Versand mit Deutsche Post Warenpost: 5,95€. Lieferzeit: 10-15 Werktage. </p><p>Versand mit DHL: 24,95€. Lieferzeit: 6-20 Werktage. </p><p>Versandkostenfrei für alle Bestellungen ab 200€. </p>",
+            "question_4": "",
+            "answer_4": "",
+            "question_5": "",
+            "answer_5": "",
+            "question_6": "",
+            "answer_6": "",
+            "question_7": "",
+            "answer_7": "",
+            "question_8": "",
+            "answer_8": "",
+            "question_9": "",
+            "answer_9": "",
+            "question_10": "",
+            "answer_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "paragraph_mjyF8j"
+      ],
+      "settings": {
+        "columns": "3"
+      }
+    }
+  },
+  "order": [
+    "web3000_legal_6gLAag",
+    "web3000_gray_cards_xarFXP"
+  ]
+}

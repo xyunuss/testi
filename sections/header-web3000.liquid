@@ -1,0 +1,197 @@
+{{ 'web3000-search.css' | asset_url | stylesheet_tag }}
+
+<div class="header-navigation header-nav-basic{% if settings.home_transparent %} header--invert{% endif %}">
+  <div class="container d-flex flex-jc-between flex-align-center p-static o-unset{% if section.settings.sticky_header_width == 'full' %} sticky-container-full{% endif %}">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'logo' -%}
+          <div class="logo desktop-logo {% if request.page_type == 'index' and settings.home_hidelogo %} invisible pointer-events-none{% endif %}">
+            <div class="header__heading">
+              <a href="{{ routes.root_url }}" class="header__heading-link focus-inset">
+                {%- if block.settings.logo != blank -%}
+                  {%- assign logo = block.settings.logo -%}
+                  {%- assign logo_width = 100 -%}
+                  {%- assign logo_width_img = 100 | append: 'x' -%}
+                  {%- assign logo_width_retina = 200 | times: 2 | append: 'x' -%}
+                  {%- assign logo_height = 100 | divided_by: logo.aspect_ratio | round -%}
+                  <img
+                    src="{{ logo | img_url: master }}"
+                    loading="eager"
+                    class="header__heading-logo logo__main w-100 h-auto ver-alg-mid d-inline-block"
+                    alt="{{ logo.alt | default: shop.name | escape }}"
+                    width="{{ logo.width }}"
+                    height="{{ logo.height }}">
+                {%- endif -%}
+              </a>
+            </div>
+          </div>
+        {%- when 'main_menu' -%}
+          <div class="main-menu hover-underline">
+            {%- if block.settings.menu != blank -%}
+              <nav
+                class="header__inline-menu"
+                data-navigation
+                role="navigation">
+                {% render 'halo-navigation-list'
+                  , listClass: 'list-menu list-menu--inline' alignment: block.settings.alignment
+                  , block: block
+                %}
+              </nav>
+            {%- endif -%}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+    <div class="shop-menu hover-underline">
+
+      <form
+        action="/search"
+        method="get"
+        role="search"
+        class="search search-modal__form">
+        <input
+          autocomplete="off"
+          class="web3000-search__input"
+          type="search"
+          name="q"
+          value=""
+          placeholder="Search"
+          value="{{ search.terms | escape }}">
+      </form>
+      {% if routes.account_login_url contains '/account/login' %}
+        {% assign is_contained = true %}
+      {% else %}
+        {% assign is_contained = false %}
+      {% endif %}
+      <a href="/pages/wishlist" class="link link--text link-effect text-center">
+        <span class="text a">{{ 'wishlist.general.title' | t }}</span>
+      </a>
+      <a
+        href="{{ routes.account_login_url }}"
+        class=" header__icon--account link link--text link-effect {% if block.settings.show_customer_sticky%}{% if block.settings.show_customer %}{% else %} hide-main-menu{% endif %}{% else %}{% if block.settings.show_customer %} show-main-menu{% endif %}{% endif %} text-center"
+        {% if is_contained %}
+        data-open-auth-sidebar{% endif %}>
+        <span class="text a">
+          {% if customer %}
+          {{ 'customer.my_account' | t }}  
+          {% else %}
+          {{ 'customer.account.my_account' | t }} 
+          {% endif %}
+          </span>
+      </a>
+      <a href="/" class="cart-link">
+        <span class="">{{ 'templates.cart.cart' | t }}</span>
+        <div>&nbsp;(
+          {%- if cart.item_count < 100 -%}
+            <span
+              class="text"
+              aria-hidden="true"
+              data-cart-count>{{ cart.item_count }}</span>
+          {%- else -%}
+            <span class="">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          {%- endif -%}
+          )</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% comment %} <script src="{{ 'web3000-search.js' | asset_url }}" defer></script> {% endcomment %}
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if logo %}
+      "logo": {{ logo | image_url: width: 500 | prepend: "https:" | json }},
+      {% endif %}
+      "url": {{ request.origin | append: page.url | json }}
+    }
+</script>
+
+{% schema %}
+  {
+    "name": "web3000 Header",
+    "limit": 1,
+    "class": "section-header-navigation hide-small",
+    "settings": [
+      {
+        "type": "select",
+        "id": "sticky_header_type",
+        "label": "t:settings_schema.general.settings.swatch.label__2",
+        "default": "on_scroll",
+        "options": [
+          {
+            "value": "none",
+            "label": "t:settings_schema.typography.settings.text_transform.options__1"
+          }, {
+            "value": "always",
+            "label": "t:sections.header.settings.enable_sticky_header.label_1"
+          }, {
+            "value": "on_scroll",
+            "label": "t:sections.header.settings.enable_sticky_header.label_2"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo",
+        "name": "Logo",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "select",
+            "id": "logo_position",
+            "label": "t:sections.header.settings.logo.label__3",
+            "default": "always",
+            "options": [
+              {
+                "value": "main_menu",
+                "label": "t:sections.header.settings.navigation.label_5"
+              }, {
+                "value": "sticky_menu",
+                "label": "t:sections.header.settings.navigation.label_6"
+              }, {
+                "value": "always",
+                "label": "t:sections.header.settings.navigation.label_7"
+              }
+            ]
+          }, {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "t:sections.header.settings.logo.label__1"
+          }
+        ]
+      }, {
+        "type": "main_menu",
+        "name": "t:sections.header.settings.menu.label__1",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "t:sections.header.settings.menu.label__1",
+            "default": "main-menu"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 - Header",
+        "blocks": [
+          {
+            "type": "logo"
+          }, {
+            "type": "main_menu"
+          }
+        ]
+      }
+    ],
+    "enabled_on": {
+      "groups": ["header"]
+    }
+  }
+{% endschema %}

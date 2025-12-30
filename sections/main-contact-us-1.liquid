@@ -1,0 +1,55 @@
+{% comment %}<link rel="stylesheet" href="{{ 'component-contact.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-contact-form.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-contact.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-contact-form.css' | asset_url | stylesheet_tag }}</noscript>
+{% endcomment %}
+
+{%- liquid
+    assign contact_form_text = section.settings.contact_form_text
+    assign contact_form_text_2 = section.settings.contact_form_text_2
+    assign contact_form_text_privacy = section.settings.contact_form_text_privacy
+-%}
+
+<div data-section-id="{{ section.id }}" data-section-type="contact" id="ContactSection-{{ section.id }}" data-section="{{ section.id }}">
+    <div class="contact-container container">
+        <div class="page-content contact-content">
+            <div class="contact contact-1">
+                <div class="contact-item">
+                    {% render 'contact-form',
+                        section: section,
+                        contact_form_text: contact_form_text,
+                        contact_form_text_2: contact_form_text_2,
+                        contact_form_text_privacy: contact_form_text_privacy
+                    %} 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+	{
+		"name": "t:sections.main_contact.name",
+        "settings": [
+            {
+                "type": "header",
+                "content": "t:sections.main_contact.settings.header__2"
+            },
+            {
+                "type": "richtext",
+                "id": "contact_form_text",
+                "label": "Text above the form"
+            },
+            {
+                "type": "richtext",
+                "id": "contact_form_text_2",
+                "label": "Text under the form"
+            },
+            {
+                "type": "richtext",
+                "id": "contact_form_text_privacy",
+                "label": "Text forprivacy checkbox"
+            }
+        ]
+	}
+{% endschema %}

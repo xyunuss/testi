@@ -1,0 +1,190 @@
+{{ 'web3000-full-width-image-video.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign autoVideo = section.settings.autoplay
+-%}
+<div class="web3000-full-width-image-video-section{% if section.settings.black_background %} bg-black{% endif %}"  {% if section.settings.black_background %}
+    data-midnight="white"
+  {% else %}
+    data-midnight="black"
+  {% endif %}>
+  {% if section.settings.video_mp4 == blank and section.settings.url_mp4 == blank %}
+    <div class="{% if section.settings.cover_image_mobile %} hide-small{% endif %}">
+      {% render 'image' with  image: section.settings.cover_image
+        , class_name: 'web3000-full-width-image-video__image'
+      %}
+    </div>
+    {% if section.settings.cover_image_mobile %}
+      <div class="hide-large">
+        {% render 'image' with  image: section.settings.cover_image_mobile
+          , class_name: 'web3000-full-width-image-video__image'
+        %}
+      </div>
+    {% endif %}
+  {% else %}
+    <div class="web3000-full-width-image-video section-block-{{section.id}}" data-loader-script="{%- if autoVideo -%}{{ 'autoplay-video.js' | asset_url }}{%- else -%}{{ 'deferred-media.js' | asset_url }}{%- endif -%}">
+      <div>
+        <noscript>
+          <div
+            class="web3000-full-width-image-video__media"
+            {% if section.settings.cover_image != blank %}
+            style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"
+            {% endif %}>
+            <a
+              {% if section.settings.video_url == blank %}
+              role="link"
+              aria-disabled="true"
+              {% else %}
+              href="{{ section.settings.video_url }}"
+              {% endif %}
+              class="web3000-full-width-image-video__poster media media--transparent media--landscape{% if section.settings.cover_image == blank %} web3000-full-width-image-video__placeholder{% endif %}">
+              {%- if section.settings.cover_image != blank -%}
+                <img
+                  srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375, format: 'pjpg' }} 375w,{%- endif -%}
+                    {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: 750, format: 'pjpg' }} 750w,{%- endif -%}
+                    {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | image_url: width: 1100, format: 'pjpg' }} 1100w,{%- endif -%}
+                    {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}
+                    {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | image_url: width: 1780, format: 'pjpg' }} 1780w,{%- endif -%}
+                    {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | image_url: width: 2000, format: 'pjpg' }} 2000w,{%- endif -%}
+                    {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | image_url: width: 3000, format: 'pjpg' }} 3000w,{%- endif -%}
+                    {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | image_url: width: 3840, format: 'pjpg' }} 3840w,{%- endif -%}
+                    {{ section.settings.cover_image | image_url }} {{ section.settings.cover_image.width }}w"
+                  src="{{ section.settings.cover_image | image_url: width: 1920, format: 'pjpg' }}"
+                  sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
+                  alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+                  loading="lazy"
+                  width="{{ section.settings.cover_image.width }}"
+                  height="{{ section.settings.cover_image.height }}">
+              {%- else -%}
+                {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+            </a>
+          </div>
+        </noscript>
+        <deferred-media class="web3000-full-width-image-video__media deferred-media no-js-hidden{% if settings.banner_animation == 'effect_fade_up' %} scroll-trigger animate--slide-in{% endif %}" data-media-id="{{ section.settings.video_url.id }}">
+          <button
+            id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"
+            class="web3000-full-width-image-video__poster media deferred-media__poster media--landscape"
+            type="button"
+            {% if autoVideo %}
+            style="display: none"
+            {% endif %}>
+            {%- if section.settings.cover_image != blank -%}
+              <img
+                srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375, format: 'pjpg' }} 375w,{%- endif -%}
+                  {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: 750, format: 'pjpg' }} 750w,{%- endif -%}
+                  {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | image_url: width: 1100, format: 'pjpg' }} 1100w,{%- endif -%}
+                  {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: 1500, format: 'pjpg' }} 1500w,{%- endif -%}
+                  {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | image_url: width: 1780, format: 'pjpg' }} 1780w,{%- endif -%}
+                  {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | image_url: width: 2000, format: 'pjpg' }} 2000w,{%- endif -%}
+                  {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | image_url: width: 3000, format: 'pjpg' }} 3000w,{%- endif -%}
+                  {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | image_url: width: 3840, format: 'pjpg' }} 3840w,{%- endif -%}
+                  {{ section.settings.cover_image | image_url }} {{ section.settings.cover_image.width }}w"
+                src="{{ section.settings.cover_image | image_url: width: 1920, format: 'pjpg' }}" 
+                sizes="{% if section.settings.full_width %}100vw{% else %}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw{% endif %}"
+                alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+                loading="lazy"
+                width="{{ section.settings.cover_image.width }}"
+                height="{{ section.settings.cover_image.height }}">
+            {%- else -%}
+              <div class="not_img" style="--height_not_img: 100%">
+                {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              </div>
+            {%- endif -%}
+            <span class="deferred-media__poster-button motion-reduce">
+              {%- render 'icon-play' -%}
+            </span>
+          </button>
+          <{%- if autoVideo -%}div{%- else -%}template{%- endif -%}>
+            <div class="video-container">
+              {% if section.settings.video_mp4 != blank %}
+                <video
+                  class="web3000-video js-video"
+                  playsinline
+                  preload="none"
+                  {% if autoVideo %}
+                  autoplay
+                  loop
+                  muted
+                  {% else %}
+                  controls{% endif %}>
+                  <source src="{{ section.settings.video_mp4.sources[1].url }}" type="video/mp4">
+                </video>
+              {% else if section.settings.url_mp4 != blank %}
+                <video
+                  class="web3000-video js-video"
+                  playsinline
+                  preload="none"
+                  {% if autoVideo %}
+                  autoplay
+                  loop
+                  muted
+                  {% else %}
+                  controls{% endif %}>
+                  <source src="{{ section.settings.url_mp4 }}" type="video/mp4">
+                </video>
+              {% endif %}
+            </div>
+          </{%- if autoVideo -%}div{%- else -%}template{%- endif -%}>
+        </deferred-media>
+      </div>
+    </div>
+  {% endif %}
+  {% if section.settings.caption != blank %}
+    <div class="web3000-full-width-image-video__caption text-center{% if section.settings.black_background %} text-white{% endif %}">
+      {{ section.settings.caption }}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "web3000 Image/Video",
+    "class": "web3000-full-width-image-block",
+    "tag": "section",
+    "settings": [
+    {
+        "type": "checkbox",
+        "id": "black_background", 
+        "label": "Black Background",
+        "default": false
+      },
+      {
+        "type": "image_picker",
+        "id": "cover_image",
+        "label": "Image (Desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "cover_image_mobile",
+        "label": "Image (Mobile)"
+      },
+      {
+        "type": "video",
+        "id": "video_mp4",
+        "label": "Video mp4 File"
+      }, {
+        "type": "url",
+        "id": "url_mp4",
+        "label": "External mp4 URL"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "t:sections.video.settings.autoplay.label",
+        "default": true
+      },
+      {
+        "type": "richtext",
+        "id": "caption",
+        "label": "Caption",
+        "info": "Add a caption to display below the media"
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 Image/Video"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,147 @@
+{{ 'web3000-filter.css' | asset_url | stylesheet_tag }}
+
+<section>
+  <div class="web3000-isotope-component web3000-isotope-component--product-grid relative">
+    <div class="wrap filter-wrap">
+      <div class="web3000-filter-panel">
+          <h1 class="">
+            {{ 'web3000.shop_all_products' | t }}
+          </h1>
+        <div class="web3000-filter-button-wrapper">
+          {%- for collection in collections -%}
+            {%- if collection.products_count >= 1 -%}
+              <button
+                class="web3000-filter-button"
+                type="button"
+                data-value="{{ collection.title | handleize }}">
+                <div class="web3000-filter-button-checkbox"></div>
+                <span class="text">{{ collection.title | escape }}</span>
+              </button>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap--half">
+      <div class="web3000-product-grid web3000-isotope">
+        {% for block in section.blocks %}
+        {% assign product = block.settings.featured_product %}
+          {% assign collection_names = '' %}
+          {% for collection in product.collections %}
+            {% assign collection_names = collection_names | append: collection.title %}
+            {% unless forloop.last %}
+              {% assign collection_names = collection_names | append: ', ' %}
+            {% endunless %}
+          {% endfor %}
+          {% if product.featured_media %}
+            <div class="web3000-isotope__block web3000-isotope__block--product-grid" data-group="{{ collection_names | handleize }}">
+                {% if block.settings.product_link != blank %}
+                    <a href="{{ block.settings.product_link }}">
+                {% else %}
+                    <div>
+                {% endif %}
+              {% render 'web3000-product-card-manual',
+                  product_card_product: product,
+                  block: block,
+                  portrait_aspect_ratio: 1,
+                  serial: forloop.index,
+                  sectionId: section.id,
+                  media_size: 'square',
+                  hasCountdown: false,
+                  loading: true,
+                  custom_image: block.settings.image,
+                  custom_video: block.settings.video_mp4,
+                  custom_hover_image: block.settings.hover_image,
+                  custom_hover_video: block.settings.hover_video_mp4,
+                  custom_title: block.settings.product_title,
+                  custom_subtitle: block.settings.product_subtitle,
+                  custom_shop_badge: block.settings.product_badge
+              %}
+              {% if block.settings.product_link != blank %}
+                </a>
+            {% else %}
+                  </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+        <div class="grid-sizer grid-sizer--product-grid"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="{{ 'isotope.js' | asset_url }}" defer></script>
+<script src="{{ 'web3000-isotope.js' | asset_url }}" defer></script>
+
+
+{% schema %}
+{
+  "name": "web3000 Products Manual",
+  "class": "web3000-collection-manual-block",
+  "tag": "section",
+  "settings": [
+          ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Product",
+      "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Front Image"
+          },
+          {
+            "type": "video",
+            "id": "video_mp4",
+            "label": "Front Video mp4 File"
+          },
+          {
+            "type": "image_picker",
+            "id": "hover_image",
+            "label": "Hover Image"
+          },
+          {
+            "type": "video",
+            "id": "hover_video_mp4", 
+            "label": "Hover Video mp4 File"
+          },
+          {
+            "type": "product",
+            "id": "featured_product",
+            "label": "Select a product"
+            },
+          {
+              "type": "url",
+              "id": "product_link",
+              "label": "Product Link"
+          },
+          {
+            "type": "text",
+            "id": "product_title", 
+            "label": "Title (optional)"
+          },
+          {
+            "type": "text",
+            "id": "product_subtitle",
+            "label": "Subtitle (optional)"
+          },
+          {
+            "type": "text",
+            "id": "product_badge",
+            "label": "Custom Badge"
+          }
+
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "web3000 Products Manual"
+    }
+  ]
+}
+{% endschema %}

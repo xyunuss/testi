@@ -1,0 +1,69 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+	"sections": {
+		"web3000_legal_6gLAag": {
+			"type": "web3000-legal",
+			"blocks": {
+				"group_iPbRx3": {
+					"type": "group",
+					"settings": {
+						"text": "DIE BRAND",
+						"anchor": "brand",
+						"content": "<p>DIE BRAND</p><p>Gegründet im Jahr 2020 als Hatice Schmidt LaBS und 2024 zu neuem Leben erweckt, ist HATICE SCHMIDT das geistige Kind der gleichnamigen Beauty-Expertin, YouTube-Ikone, Unternehmerin und Bestsellerautorin. Das Credo, das sowohl die Marke HATICE SCHMIDT als auch die Person zusammenfasst: keine Kompromisse! Bei HATICE SCHMIDT, Deutschlands erster echten High-End-Beauty-Marke, wird dies in exklusiven Make-up-Produkten mit ikonischer Verpackung sowie hochleistungsfähigen Make-up-Lösungen, die von Innovation leben, umgesetzt.</p>"
+					}
+				},
+				"group_dd4RU4": {
+					"type": "group",
+					"settings": {
+						"text": "DIE VISION",
+						"anchor": "vision",
+						"content": "<p>DIE VISION</p><p>Die Ästhetik von HATICE SCHMIDT bewegt sich zwischen Roughness und Luxury, nicht als Dogma, sondern vielmehr als Ermutigung. Unser Wunsch ist, dass ihr alle frei ausdrückt, wer ihr seid – wir sind hier, um euch darin zu unterstützen und zu inspirieren. Für Hatice persönlich, durch ihren Erfolg als Deutschlands führende Beauty-Content-Creatorin in der ersten großen Youtube-Welle, wurde Freiheit zur Definition von Luxus. Während sie Tausende von Luxus-Beauty-Produkten rezensierte und ihre Liebe zu ihnen kultivierte, lernte sie über ein Jahrzehnt hinweg: du selbst zu sein, ohne Kompromisse – das ist es, was Luxus wirklich bedeutet.</p>"
+					}
+				},
+				"group_qJDrLx": {
+					"type": "group",
+					"settings": {
+						"text": "DIE MISSION",
+						"anchor": "mission",
+						"content": "<p>DIE MISSION</p><p>Unsere Mission ist es, eure Ausdruckskraft auf die innovativsten Weisen zu unterstützen durch high-performing Make-up-Produkte, die von unserer Hingabe zur Präzision leben – das ist das Innere. Nach außen hin sind unsere Produkte genauso expressiv wie ihr: laut und kühn. Denn Make-up ist Kunst, weil ihr Kunst seid, weil euer Gesicht Kunst ist. Wir haben symbolträchtige Verpackungen entwickelt, die recycelbar sind und euch das Gefühl geben, ein Kunstwerk in der Hand zu halten. Unser erstes Produkt bei HATICE SCHMIDT, der ikonische Lippenstift in einer Hülle aus dicken Metallketten, ist die Blaupause, die alles (neu) ins Rollen brachte.</p>"
+					}
+				},
+				"group_ypeRLE": {
+					"type": "group",
+					"settings": {
+						"text": "DIE PERSON",
+						"anchor": "person",
+						"content": "<p>DIE PERSON</p><p>Hatice nannte diesen ersten Lippenstift „The Gift“, weil sie ihren Kunden etwas extrem Persönliches geben wollte, ein Geschenk von ihr an euch alle (sie liebt es, dicke Goldketten als Schmuck zu tragen). Alles, was bei HATICE SCHMIDT geschieht, wird von dem angetrieben, was Hatice ist und wer sie ist. Aufgewachsen in prekären Verhältnissen im berühmt-berüchtigten Berliner Bezirk Neukölln, fühlte sie sich vom Rest der Welt abgeschnitten, und erst recht von der Welt des Luxus, von der sie immer träumte. Schon mit sechs Jahren nannte Hatice ihre Katze Gucci. Make-up wurde ihr Weg, um zu träumen, und YouTube ihr Weg aus der Armut.</p>"
+					}
+				},
+				"group_XpfKa3": {
+					"type": "group",
+					"settings": {
+						"text": "DIE VERANTWORTUNG",
+						"anchor": "verantwortung",
+						"content": "<p>DIE VERANTWORTUNG</p><p>Als Unternehmerin hat Hatice heute mit HATICE SCHMIDT ein neues Verständnis von Luxus in der Welt der Schönheit geschaffen, eine Art, etwas Zeitloses zu denken, ohne dass es klassisch sein muss. Bereits seit einem Jahrzehnt spricht unsere Gründerin durch Content-Erstellung zu Millionen und versteht, wie und was Millionen denken. Aufgrund ihrer persönlichen Geschichte ist es für Hatice wichtig, immer etwas zurückzugeben. In enger Zusammenarbeit mit verschiedenen NGOs unterstützt sie den Kampf gegen Kinderarmut. Und ihr Buch „Dein Leben ist kein Zufall“ hat unzählige junge Menschen dazu inspiriert, sich zum Besseren zu verändern.</p>"
+					}
+				},
+				"group_KPdWme": {
+					"type": "group",
+					"settings": {
+						"text": "DIE WERTE",
+						"anchor": "werte",
+						"content": "<p>DIE WERTE</p><p>Indem sie nach ihren Werten lebt, setzt Hatice mit HATICE SCHMIDT ein mutiges Beispiel dafür, wohin ein Traum führen kann. Und jetzt: lasst euch inspirieren – und vergesst niemals, laut und deutlich zu zeigen, wer ihr seid.</p>"
+					}
+				}
+			},
+			"block_order": ["group_iPbRx3", "group_dd4RU4", "group_qJDrLx", "group_ypeRLE", "group_XpfKa3", "group_KPdWme"],
+			"settings": {}
+		}
+	},
+	"order": ["web3000_legal_6gLAag"]
+}

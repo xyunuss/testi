@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="{{ 'web3000-component-auth.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'web3000-component-auth.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'web3000-button.css' | asset_url | stylesheet_tag }}
+
+
+
+{% capture close_classes %}
+  button-effect
+{% if customer %} halo-sidebar-close halo-sidebar-close--logged-in {% else %} halo-sidebar-close-guest{% endif %}
+{% endcapture %}
+
+<customer-auth class="web3000-component-auth" data-auth-sidebar id="halo-auth-sidebar">
+    <div class="web3000-component-auth__close-area">
+        <div class="web3000-component-auth__wrapper">
+            <div>
+                {%- unless customer -%}
+                    <h2 class="web3000-component-auth__login-title">{{ 'customer.log_in' | t }}</h2>
+                {%- endunless -%}
+
+                <button type="button" class="{{ close_classes | strip }}" data-close-auth-sidebar title="{{ 'general.common.close' | t }}">{% render 'icon-close' %}{{ 'general.common.close' | t }}</button>
+            </div>
+            <div class="custom-scrollbar">
+                {%- if customer -%}
+                    <ul class="account-dropdown list-unstyled">
+                        <li class="account-item"><a class="link account-action" href="{{ routes.account_url }}"><span class="text">{{ 'customer.account.details' | t }}</span></a></li>
+                        <li class="account-item"><a class="link account-action" href="{{ routes.account_addresses_url }}"><span class="text">{{ 'customer.addresses.title' | t }}</span></a></li>
+                        <li class="account-item"><a class="link account-action" href="{{ routes.account_login_url }}#recover"><span class="text">{{ 'customer.recover_password.title' | t }}</span></a></li>
+                        <li class="account-item"><a class="link account-action" href="{{ routes.account_logout_url }}"><span class="text">{{ 'customer.log_out' | t }}</span></a></li>
+                    </ul>
+                {%- else -%}
+                    <form accept-charset="UTF-8" action="{{ routes.account_login_url }}" method="post" class="auth-form auth-form-2">
+                        <input name="form_type" type="hidden" value="customer_login" />
+                        <input name="utf8" type="hidden" value="✓" />
+                        <div class="form-field">
+                            <label class="form-label" for="customer_email">{{ 'customer.login_page.email' | t }} <em>*</em></label>
+                            <input id="customer_email" class="form-input form-input-placeholder text-left" type="email" value="" name="customer[email]" required placeholder="{{ 'customer.login_page.email' | t }}">
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="customer_password">{{ 'customer.login_page.password' | t }} <em>*</em></label>
+                            <input id="customer_password" class="form-input form-input-placeholder text-left" type="password" value="" required placeholder="{{ 'customer.login_page.password' | t }}" name="customer[password]">
+                        </div>
+                        <div class="form-actions auth-actions text-center">
+                            {% if settings.enable_button_1_border_outside %}
+                                <button class="web3000-button web3000-button--large web3000-button--login-full-w"><span>{{ 'customer.log_in' | t }}</span></button>
+                            {% else %}
+                                <input type="submit" class="web3000-button web3000-button--large web3000-button--login-full-w" value="{{ 'customer.log_in' | t }}">
+                            {% endif %}
+                            <a class="auth-link link link-underline" href="{{ routes.account_login_url }}#recover"><span class="text">{{ 'customer.forgot_password' | t }}</span></a>
+                            <a href="{{ routes.account_register_url }}" class="button-register">{{ 'customer.register.title' | t }}</a>
+                        </div>
+                    </form>              
+                {%- endif -%}
+            </div>
+        </div>
+        <button type="button" class="halo-sidebar-close-text" data-close-auth-sidebar title="{{ 'general.common.close' | t }}">{{ 'general.common.close' | t }}</button>
+    </div>
+</customer-auth>
+<script src="{{ 'web3000-halo-customer-login.js' | asset_url }}" defer="defer"></script>

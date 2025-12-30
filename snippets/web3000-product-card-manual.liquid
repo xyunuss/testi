@@ -1,0 +1,154 @@
+{%- comment -%}
+  Renders a product card
+
+  Accepts:
+  - product_card_product: {Object} Product Liquid object (optional)
+  - media_size: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+  - add_image_padding: {Boolean} Enables padding on the image to space out the grid
+  - show_vendor: {Boolean} Show the product vendor. Default: false
+
+  Usage:
+  {% render 'product-card', show_vendor: section.settings.show_vendor %}
+{%- endcomment -%}
+
+{%- liquid
+  assign isColor = false
+  assign variant_img = ''
+  for option in product_card_product.options_with_values
+    assign option_name = option.name | downcase
+    assign position = 0
+    assign variant_selected = nil
+
+  endfor
+
+  assign media_size = settings.product_block_image_ratio
+  if media_size == 'portrait'
+    assign portrait_aspect_ratio = settings.portrait_height
+  endif
+
+  assign featured_media_aspect_ratio = product_card_product.featured_media.aspect_ratio
+  if product_card_product.featured_media.aspect_ratio == nil
+    assign featured_media_aspect_ratio = 1
+  endif
+
+  assign product_action_group = false
+
+  assign show_quick_view = false
+  if settings.show_quick_view
+    if settings.product_quick_view_type == 'icon' or settings.show_quick_view_mb
+      assign show_quick_view = true
+    endif
+  endif
+
+  assign show_wishlist = false
+  if settings.show_wishlist_card and settings.show_wishlist
+    assign show_wishlist = true
+  elsif template.suffix == 'ajax_wishlist_card'
+    assign show_wishlist = true
+  endif
+
+  assign show_compare = false
+  if settings.show_compare and settings.product_compare_type == 'icon'
+    assign show_compare = true
+  endif
+
+  if show_quick_view or show_wishlist or show_compare
+    assign product_action_group = true
+  endif
+
+  assign has_video = product_card_product.media | where: 'media_type', 'video'
+
+  assign show_price = settings.show_price
+-%}
+
+{% if product_card_product.featured_media %}
+  <div
+    class="product-item"
+    data-product-id="{{ product_card_product.id }}">
+    <div class="card">
+      <div class="card-product {% if product_card_product.featured_media == nil %} card--text-only card--soft{% endif %}">
+        <div class="card-product__wrapper">
+          {%- if settings.show_badge -%}
+            {% render 'web3000-product-badge'
+              , product: product_card_product
+              , class: 'card__badge'
+              , badge_detail: true
+              , serial: serial
+              , custom_shop_badge: custom_shop_badge %}
+          {%- endif -%}
+          <div class="card-media card-media--{{ media_size }}
+            {%- if custom_hover_image != blank or custom_hover_video != blank %} media--hover-effect{% endif -%}
+            {%- if settings.show_compare and settings.product_compare_type == 'default' %} has-compare{% endif -%}
+            {%- if loading %} media--loading-effect{% endif -%}"
+            {%- if product_card_product.featured_media -%}
+              {%- case media_size -%}
+                {%- when 'adapt' -%}
+                  style="padding-bottom: {{ 1 | divided_by: featured_media_aspect_ratio | times: 100 }}%;"
+                {%- when 'square' -%}
+                  style="padding-bottom: 100%;"
+                {%- when 'portrait' -%}
+                  {%- if portrait_aspect_ratio != blank -%}
+                    style="padding-bottom: {{ portrait_aspect_ratio | append: '%' }};"
+                  {%- endif -%}
+              {%- endcase -%}
+            {%- endif -%}>
+            {% render 'image-product-card-manual'
+              , product_card_product: product_card_product
+              , variant_img: variant_img
+              , has_video: has_video
+              , loading: loading
+              , custom_image: custom_image
+              , custom_video: custom_video
+              , custom_hover_image: custom_hover_image
+              , custom_hover_video: custom_hover_video %}
+          </div>
+        </div>
+      </div>
+
+      <div class="card-information">
+        <div class="card-information__wrapper">
+          <h3 class="card__heading">
+            <div
+              class="card-title{% if settings.product_title_line_text != 'full' %} card-title-ellipsis{% endif %}{% if variant_selected != blank %} card-title-change{% endif %}"
+              data-href="{{ product_card_product.url }}"
+              data-product-title="{{ product_card_product.title | escape }}"
+              data-product-url="{{ product_card_product.url }}">
+              {% if custom_title != blank %}
+                {{ custom_title }}
+              {% else %}
+                {{ product_card_product.title | escape }}
+              {% endif %}
+              {% if variant_selected != blank %}
+                <span data-change-title>
+                  {% unless settings.quick_shop_type == '2' %}
+                    {% if settings.style_text_color_varriant == '01' %}-{% endif %}
+                    {{ variant_selected }}{% endunless %}
+                </span>
+              {% endif %}
+            </div>
+          </h3>
+
+          {%- if show_price -%}
+            <div class="card-price">
+              {% render 'price'
+                , product: product_card_product
+                , price_class: ''
+                , hasCountdown: hasCountdown %}
+            </div>
+          {%- endif -%}
+          </div>
+
+          <div class="text-gray">
+            {% if custom_subtitle != blank %}
+              {{ custom_subtitle }}
+            {% else %}
+              {{ product_card_product.metafields.custom.weight }} &nbsp;
+            {% endif %}
+            &nbsp;
+          </div>
+
+      </div>
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,51 @@
+.web3000-halo-productBadges {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.web3000-halo-productBadges .badge {
+	padding: var(--small-button-padding);
+	text-transform: uppercase;
+}
+
+.web3000-halo-productBadges .badge.sale-badge {
+	background-color: var(--color-bg-green);
+}
+
+.web3000-halo-productBadges .badge.new-badge {
+	color: var(--color-text-white);
+	background-color: var(--color-bg-black);
+}
+
+.web3000-halo-productBadges .badge.sold-out-badge {
+	color: var(--sold-out-badge-color);
+	background-color: var(--sold-out-badge-bg);
+}
+
+.web3000-halo-productBadges .badge.custom-badge {
+	color: var(--custom-badge-color);
+	background-color: var(--custom-badge-bg);
+}
+
+.web3000-halo-productBadges .badge.bundle-badge {
+	color: var(--bundle-badge-color);
+	background-color: var(--bundle-badge-bg);
+}
+
+.web3000-halo-productBadges .badge + .badge {
+	margin-top: 5px;
+}
+
+.web3000-halo-productBadges--left {
+	left: var(--badge-postion-left-right);
+	align-items: flex-start;
+}
+
+.web3000-halo-productBadges--right {
+	right: var(--badge-postion-left-right);
+	align-items: flex-end;
+}

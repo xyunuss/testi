@@ -1,0 +1,284 @@
+<newsletter-popup class="halo-popup web3000-newsletter-popup {% if settings.show_newsletter_popup_image %} customPopup-banner custom-scrollbar{% endif %}" data-newsletter-popup data-delay="{{ settings.newsletter_popup_delay | times:1000 }}" data-expire="{{ settings.newsletter_popup_expire }}" id="web3000-newsletter-popup">
+    
+    <div class="web3000-popup-wrapper ">
+        {%- if settings.show_newsletter_popup_image -%}
+            <div class="web3000-newsletter-image">
+                {%- if settings.newsletter_popup_image != blank -%}
+                {%- assign image =  settings.newsletter_popup_image -%}        
+                     <img {% render 'lazyload',preview_img: image, class: true, enable_rtl: settings.enable_layout_rtl %} />           
+                {%- endif -%} 
+            </div>
+        {%- endif -%}
+        <button type="button" class="web3000-popup-close clearfix" data-close-newsletter-popup aria-label="{{ 'general.common.close' | t }}">
+            <span class="hide-mobile">{{ 'general.common.close' | t }}</span>
+            <span class="hide-desktop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M11.3719 0.461101L0.829834 10.8269M11.6281 10.8163L1.0569 0.421875" stroke="white"/>
+                </svg>
+            </span>
+        </button>
+           
+           
+         
+        <div class="web3000-popup-header">
+            {%- if settings.newsletter_popup_title != blank -%}
+                <h3 class="web3000-newsletter-popup-title text-center">{{ settings.newsletter_popup_title }}</h3>
+            {%- endif -%}
+            {%- if settings.newsletter_popup_subtitle != blank -%}
+                <p class="web3000-newsletter-popup-subtitle text-center">{{ settings.newsletter_popup_subtitle }}</p>
+            {%- endif -%}    
+        </div>
+
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+        <div class="web3000-popup-content-form">
+   <div class="sib-form" style="text-align: center;
+         background-color: transparent;                                 ">
+      <div id="sib-form-container" class="sib-form-container">
+        <div
+          id="error-message"
+          class="sib-form-message-panel"
+          >
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+          
+            </svg>
+            <span class="sib-form-message-panel__inner-text">
+                {{'web3000.error_newsletter_subscription' | t}}
+            </span>
+          </div>
+        </div>
+        <div></div>
+        <div
+          id="success-message"
+          class="sib-form-message-panel"
+          style="text-align: center;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+              
+            </svg>
+            <span class="sib-form-message-panel__inner-text">
+             {{'web3000.successful_newsletter_subscription' | t}}
+            </span>
+          </div>
+        </div>
+      
+
+        <div
+          id="sib-container"
+          class="sib-container--large sib-container--vertical"
+          >
+
+          <form
+            id="sib-form"
+            method="POST"
+            action="https://90a86a3c.sibforms.com/serve/MUIFAJt80hrwIjrqH6kF3-_njmN951wbvcxE0eAHnYaSzFEQn9sIzw5cn2xK7cukiDmg0aTPJX9bhdB8W0bvr7-Lzl6FZJWr3saimWje6-Gef7wCJ3jYUs06lBX1TnqZpClEHtF-g1x17m-8l5xhMlHAHXBfI4amwLn3eowK8N44Xk6I5GmBmHcA_BC0f673wQdhXdor9v94iIas"
+            data-type="subscription">
+
+            <div class="newsletter-desc hide-mobile">
+                {%- if settings.newsletter_popup_desc != blank -%}
+                    {{ settings.newsletter_popup_desc }}
+                {%- endif -%}
+            </div>
+            
+            <div style="">
+              <div class="sib-optin sib-form-block">
+                <div class="form__entry entry_mcq">
+                  <div class="form__label-row">
+                    <div class="entry__choice">
+                      <label>
+                        <input
+                      
+                          type="checkbox"
+                          required
+                          class="input_replaced web3000-newsletter-form__field field-input web3000-newsletter-form__agree"
+                          value="1"
+                          id="OPT_IN"
+                          name="OPT_IN" />
+                        <span  class="web3000-newsletter-form__agree-span"></span>
+                        <span >
+                          <p style="text-transform: none;">{{settings.newsletter_popup_agree}}</p>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <label class="entry__error entry__error--primary"></label>
+                </div>
+              </div>
+            </div>
+            <div class="web3000-newsletter-form-button-wrapper">
+                
+                <div class="sib-input sib-form-block">
+                    <div class="form__entry entry_block">
+                    <div class="form__label-row ">
+                        <div class="entry__field">
+                        <input
+                            class="web3000-newsletter-form__field field-input input field__input"
+                            type="text"
+                            id="EMAIL"
+                            name="EMAIL"
+                            autocomplete="off"
+                            placeholder="{{ 'newsletter.label' | t }}"
+                            data-required="true"
+                            required />
+                        </div>
+                    </div>
+
+                    <label class="entry__error entry__error--primary"></label>
+                    </div>
+                </div>
+                
+                <div class="sib-form-block" >
+                    <button
+                    class="sib-form-block__button web3000-button web3000-button--full-w web3000-newsletter-form__field field-input field__input"
+                    disabled=true
+                    form="sib-form"
+                    type="submit">
+
+                    <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                        
+                    </svg>
+                   {{ 'newsletter.button_label' | t }}
+                    </button>
+               
+            </div>
+            </div>
+             <div class="newsletter-desc hide-desktop">
+                {%- if settings.newsletter_popup_desc != blank -%}
+                    {{ settings.newsletter_popup_desc }}
+                {%- endif -%}
+            </div>
+            <input
+              type="text"
+              name="email_address_check"
+              value=""
+              class="input--hidden">
+              
+            <input
+            id="localeInput"
+              type="hidden"
+              name="locale"
+              value="">
+              <script>
+                        const locale = document.documentElement.getAttribute('locale') || 'en';
+        document.getElementById('localeInput').value = locale;
+
+              </script>
+          </form>
+        </div>
+      </div>
+    </div>
+        </div>
+    </div>
+</newsletter-popup>
+
+<script src="{{ 'web3000-newsletter-popup.js' | asset_url }}" defer="defer"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('sib-form');
+        var checkbox = document.getElementById('OPT_IN');
+        var submit = document.querySelector('.web3000-newsletter-form-button-wrapper button');
+        checkbox.addEventListener('change', function() {
+            submit.disabled = !checkbox.checked;
+        });
+       
+    });
+
+      function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            const expires = 'expires=' + d.toUTCString();
+            document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+        }
+
+    
+    var successMessage = document.getElementById('success-message');
+    if (successMessage) {
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.attributeName === 'class') {
+                    if (mutation.target.classList.contains('sib-form-message-panel--active')) {
+                        setCookie('newsletter-popup', 'closed', {{ settings.newsletter_popup_expire }});
+                    }
+                }
+            });
+        }); 
+        observer.observe(successMessage, { attributes: true });
+    }                   
+                                           
+    </script>
+
+
+
+
+{% comment %}  <div class="web3000-popup-content hide-">
+                < class="newsletter">
+                   {%- form 'customer', id: 'ContactPopup', class: 'newsletter-form' -%}
+                        <input type="hidden" name="contact[tags]" value="newsletter">
+                        <div class="web3000-newsletter-form__field-wrapper">
+                            <div class="form-field field"> 
+                                <input id="NewsletterForm--Popup" type="email" name="contact[email]" class="field__input form-input-placeholder" value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"{% if form.errors %} autofocus aria-invalid="true" aria-describedby="ContactFooter-error"{% elsif form.posted_successfully? %} aria-describedby="ContactFooter-success"{% endif %} placeholder="{% if settings.select_button_submit == 'default' %}{{ 'newsletter.placeholder' | t }}{% else %}{{ 'newsletter.dont_miss_out_this_sale' | t }}{% endif %}">
+                                <label class="field__label hiddenLabels" for="NewsletterForm--Popup">{{ 'newsletter.label' | t }}</label>
+                            </div>
+                            {%- if form.posted_successfully? -%}
+                                <script>
+                                    window.onload = (event) => {
+                                        var newsletterMessagePopup = (function(){
+                                            var popup = document.getElementById('halo-newsletter-message-popup'),
+                                            message = popup.getElementsByClassName('newsletter-message')[0],
+                                            messageText = "{{ 'newsletter.success' | t }}";
+
+                                            document.body.classList.add('newsletter-message-show');
+
+                                            message.innerHTML = '<div class="alertBox alertBox--success">\
+                                                <p class="alertBox-message">'+ messageText +'</p>\
+                                            </div>';
+
+                                            setCookie('newsletter-popup', 'closed', {{ settings.newsletter_popup_expire }});
+                                        })();
+                                    };
+
+                                    var newURL = location.href.split("?")[0];
+                                        window.history.pushState('object', document.title, newURL);
+
+                                    function setCookie(cname, cvalue, exdays) {
+                                        const d = new Date();
+                                        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                                        const expires = 'expires=' + d.toUTCString();
+                                        document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+                                    }
+                                </script>
+                            {%- else -%}
+                                <script>
+                                    window.onload = (event) => {
+                                        if (window.location.href.indexOf('newsletter&form_type=customer') > -1) {
+                                            var newsletterMessagePopup = (function(){
+                                                var popup = document.getElementById('halo-newsletter-message-popup'),
+                                                message = popup.getElementsByClassName('newsletter-message')[0],
+                                                messageText = "{{ 'newsletter.error' | t }}"
+                                                document.body.classList.add('newsletter-message-show');
+                                                message.innerHTML = '<div class="alertBox alertBox--error">\
+                                                        <p class="alertBox-message">'+ messageText +'</p>\
+                                                    </div>';
+                                                setCookie('newsletter-popup', 'closed', {{ settings.newsletter_popup_expire }});
+                                            })();
+                                            var newURL = location.href.split("?")[0];
+                                            window.history.pushState('object', document.title, newURL);
+                                            function setCookie(cname, cvalue, exdays) {
+                                                const d = new Date();
+                                                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                                                const expires = 'expires=' + d.toUTCString();
+                                                document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+                                            }
+                                        }
+                                    };
+                                </script>
+                            {%- endif -%}
+                            {%- if settings.select_button_submit == 'default' -%}
+                                <button type="submit" class="button button--primary newsletter-form__button" name="commit" id="Subscribe">{{ 'newsletter.button_label' | t }}</button>
+                            {%- else -%}
+                                <a class="button button--primary newsletter-form__button"{% if settings.button_newsletter_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ settings.button_newsletter_link }}"{% endif %} target="_blank">{{ 'newsletter.start_now' | t }}</a>
+                            {%- endif -%}
+                        </div>
+                    {%- endform -%} 
+               <!-- Form Container --> {% endcomment %}

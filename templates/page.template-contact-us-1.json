@@ -1,0 +1,24 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-contact-us-1",
+      "settings": {
+        "contact_form_text": "<p>Falls du eine Datei (Foto, Video, etc.) senden möchtest, schicke uns deine Anfrage mit Anhang direkt per E-Mail an <a href=\"mailto:service@haticeschmidt.com\">service@haticeschmidt.com</a>.</p>",
+        "contact_form_text_2": "<p>Wir werden deine Anfrage bearbeiten und uns bei dir melden.</p>",
+        "contact_form_text_privacy": "<p>Hiermit bestätige ich, dass ich die <a href=\"/pages/datenschutz\" title=\"Datenschutz\">Daten­schutz­erklärung</a> gelesen habe.*</p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

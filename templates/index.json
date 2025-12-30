@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "web3000_video_Dh9p9N": {
+      "type": "web3000-video",
+      "settings": {
+        "autoplay": true,
+        "bg_black": true,
+        "full_width_video": true,
+        "landing_video": true,
+        "video_mp4": "shopify://files/videos/2025-07-23 grain eCom Main.mp4",
+        "video_mp4_mobile": "shopify://files/videos/2025-07-23 grain eCom Main.mp4",
+        "url_mp4": "shopify://pages/collection"
+      }
+    },
+    "web3000_two_col_image_xic6Le": {
+      "type": "web3000-two-col-image",
+      "settings": {
+        "caption_underneath": false,
+        "invert_colors": false,
+        "video_mp4": "shopify://files/videos/2025-Q3 Lipstick Crack Animation.mp4",
+        "text_black": false,
+        "text": "<h2><strong>THE REFILL – NEW LEVEL MATTE LIPSTICK</strong></h2><p></p><p>The boldest choice? To keep what matters!<br/><br/>Dein THE GIFT Case – neu belebt.<br/><br/>Gleiche ikonische Formel. Gleiche Wirkung. Weniger Verpackung. Mehr Überzeugung.</p>",
+        "link": "shopify://collections/all",
+        "image_2": "shopify://shop_images/HS-Campaign_Beauty_L06_0775-9zu16.jpg",
+        "text_black_2": false,
+        "text_2": "<h2><strong>THE GIFT – NEW LEVEL MATTE LIPSTICK</strong></h2><p>Ein seltenes Schmuckstück kreiert für die Ewigkeit.  </p><p>High-Performance-Formulierung, pflegende Active Ingredients und ein Refill-System - geschaffen sich nicht zu verstecken.</p>",
+        "link_2": "shopify://products/the-gift-collection-set"
+      }
+    },
+    "web3000_full_width_image_HEAexY": {
+      "type": "web3000-full-width-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/HS-Campaign_Group_L01_1337_16x9_a79dff8b-12d7-472f-a850-f78c20349fa8.jpg",
+        "landing_image": false,
+        "no_cropping": true,
+        "text": "",
+        "link": ""
+      }
+    },
+    "web3000_two_col_image_gneNW4": {
+      "type": "web3000-two-col-image",
+      "settings": {
+        "caption_underneath": false,
+        "invert_colors": false,
+        "image": "shopify://shop_images/HS-Campaign_Beauty_L10_1129-topaz-sharpen-upscale-1x_Kopie.jpg",
+        "text_black": false,
+        "text": "<h2><strong>Entdecke unsere kuratierten Sets.</strong></h2><p>Ikonische Kombinationen – exklusiv gebündelt.</p><p>Sorgfältig zusammengestellt. Exklusiv im Preis.</p>",
+        "link": "shopify://products/the-gift-collection-set",
+        "video_mp4_2": "shopify://files/videos/2025-Q3 THE LINER BILLY Lipliner Cool ASh Posing.mp4",
+        "text_black_2": false,
+        "text_2": "<h2><strong>THE LINER – MATTE LASER LIP LINER</strong></h2><p><br/>1,5 mm Laser-Präzision – für dein Lip Statement.<br/>Velvet glide. Laser sharp edges.</p><p><br/>Cremig im Auftrag. Pflegend für deine Lippen. Bold im Ausdruck. Bleibt, wo du es willst.</p>",
+        "link_2": "shopify://products/the-liner"
+      }
+    },
+    "web3000_two_col_image_Ndk9dg": {
+      "type": "web3000-two-col-image",
+      "settings": {
+        "caption_underneath": false,
+        "invert_colors": false,
+        "image": "shopify://shop_images/Hatice_Schmidt_precise_laser_Lipliner_Shade_Blood_Rose_Background.jpg",
+        "video_mp4": "shopify://files/videos/2025-Q3 Deep Posing Animation.mp4",
+        "text_black": false,
+        "text": "<h2><strong>THE LIP BRUSH</strong></h2><p>Präzision aus Japan – Kumano. Vegane Exzellenz.<br/>Handgefertigte High-End-Performance für Statement-Linien mit Haltung.</p>",
+        "link": "shopify://products/the-lip-brush",
+        "video_mp4_2": "shopify://files/videos/2025-Q3 Hatice Posing Animation.mp4",
+        "text_black_2": false,
+        "text_2": "<h2><strong>BRAND</strong></h2><p>Echt, laut und kompromisslos schön. Luxus, neu definiert</p><p>HATICE SCHMIDT ist mehr als Make-up – es ist Haltung. </p><p>Spüre Deine Einzigartigkeit, Du selbst zu sein.</p>",
+        "link_2": "shopify://pages/ueber-uns"
+      }
+    },
+    "web3000_rich_text_RczJwB": {
+      "type": "web3000-rich-text",
+      "settings": {
+        "invert_colors": false,
+        "big_margin": false,
+        "richtext_content": "<p>HATICE SCHMIDT kombiniert exklusive Make-up-Produkte in ikonischer Verpackung mit leistungsstarken Beauty-Lösungen, die von Innovation angetrieben werden. Als Deutschlands erste echte High-End-Beauty-Brand ist es unsere Mission, dafür zu sorgen, dass unsere Kunden niemals Kompromisse eingehen müssen – und ihrer Ausdruckskraft mit perfektionierter Präzision folgen können.</p>"
+      }
+    },
+    "web3000_three_col_image_wmt8m6": {
+      "type": "web3000-three-col-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/HS-Campaign_Beauty_L01_0084.jpg",
+        "text_black": false,
+        "text": "",
+        "link": "",
+        "image_2": "shopify://shop_images/240907_Hatice-Schmidt-CAMPAIGN_PRODUCT_011.jpg",
+        "text_black_2": false,
+        "text_2": "",
+        "link_2": "",
+        "image_3": "shopify://shop_images/HS-Campaign_Beauty_L09_1086.jpg",
+        "text_black_3": false,
+        "text_3": "",
+        "link_3": ""
+      }
+    },
+    "web3000_collection_manual_9d4h4R": {
+      "type": "web3000-collection-manual",
+      "blocks": {
+        "group_dVgzVi": {
+          "type": "group",
+          "settings": {
+            "featured_product": "",
+            "product_link": "",
+            "product_title": "",
+            "product_subtitle": "",
+            "product_badge": ""
+          }
+        },
+        "group_8rrDUQ": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_REFILL_SMOKEDROSEWOOD_Double_bb29c049-687b-4520-b848-1a3ef959e6f9.jpg",
+            "featured_product": "the-gift-lip-kit",
+            "product_link": "shopify://products/the-gift-lip-kit",
+            "product_title": "test",
+            "product_subtitle": "",
+            "product_badge": ""
+          }
+        }
+      },
+      "block_order": [
+        "group_dVgzVi",
+        "group_8rrDUQ"
+      ],
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "web3000_video_Dh9p9N",
+    "web3000_two_col_image_xic6Le",
+    "web3000_full_width_image_HEAexY",
+    "web3000_two_col_image_gneNW4",
+    "web3000_two_col_image_Ndk9dg",
+    "web3000_rich_text_RczJwB",
+    "web3000_three_col_image_wmt8m6",
+    "web3000_collection_manual_9d4h4R"
+  ]
+}

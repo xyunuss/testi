@@ -1,0 +1,136 @@
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+<link
+  rel="stylesheet"
+  href="{{ 'component-list-payment.css' | asset_url }}"
+  media="all"
+  onload="this.media='all'">
+<noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
+
+<footer class="footer footer-1">
+  {%- if section.blocks.size > 0 -%}
+    <div class="footer__content-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-grid__shop-name">Hatice Schmidt GmbH
+            <nav class="language-switcher">
+                {% assign current_locale = shop.locale %}
+                {% assign current_path = request.path %}
+              <ul>
+                <li class="{% if current_locale == 'en' %}active{% endif %}">
+                  <a href="{% if current_locale == 'de' %}{% if current_path == '/' %}/en{% else %}/en{{ current_path }}{% endif %}{% else %}{{ current_path }}{% endif %}">EN</a>
+                </li>
+                <li class="{% if current_locale == 'de' %}active{% endif %}">
+                  <a href="{% if current_locale == 'en' %}{% if current_path == '/en' %}/{% else %}{{ current_path | replace: '/en', '' }}{% endif %}{% else %}{{ current_path }}{% endif %}">DE</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+          <div class="footer-grid__navigation">
+            {%- for block in section.blocks -%}
+              {%- if forloop.first and block.type == 'text' -%}
+                {%- assign block__text_first = 'block__text_first' -%}
+              {%- endif -%}
+              {%- if block.type == 'text' -%}
+                {% render 'footer-text-column'
+                  , block: block
+                  , block__text_first: block__text_first
+                  , text_align: text_align %}
+              {%- elsif block.type == 'link_list' -%}
+                {% render 'footer-links-column'
+                  , block: block
+                  , block__text_first: block__text_first
+                  , text_align: text_align %}
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          <div class="footer-grid__year">©{{ 'now' | date: '%Y' }}</div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</footer>
+<script type="text/javascript">
+  function initDropdownColumnsFooter() {
+    var footerColumnTitle = document.querySelectorAll('.footer-1 [data-toggle-column-footer]');
+    if (footerColumnTitle.length > 0) {
+      for (i = 0; i < footerColumnTitle.length; i++) {
+        (function (i) {
+          footerColumnTitle[i].addEventListener('click', function (event) {
+            var $this = event.target;
+            
+            if ($this.classList.contains('is-clicked')) {
+              $this.classList.remove('is-clicked');
+            } else {
+              footerColumnTitle.forEach(function (element) {
+                element.classList.remove('is-clicked');
+              });
+              $this.classList.add('is-clicked');
+            }
+          });
+        })(i);
+      }
+    }
+  }
+  initDropdownColumnsFooter();
+</script>
+
+
+{% schema %}
+  {
+    "name": "Footer 01",
+    "limit": 1,
+    "max_blocks": 7,
+    "blocks": [
+      {
+        "type": "link_list",
+        "name": "t:sections.footer.blocks.link_list.name",
+        "limit": 5,
+        "settings": [
+          {
+            "id": "heading",
+            "type": "text",
+            "label": "t:sections.image-banner.blocks.image.settings.content.label__19",
+            "info": "t:sections.footer.blocks.link_list.settings.heading.info",
+            "default": "Quick links"
+          }, {
+            "id": "menu",
+            "type": "link_list",
+            "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+            "info": "t:sections.footer.blocks.link_list.settings.menu.info",
+            "default": "footer"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Footer 01",
+        "blocks": [
+          {
+            "type": "link_list",
+            "settings": {
+              "heading": "Shop",
+              "menu": "ella-6-shop-by"
+            }
+          }, {
+            "type": "link_list",
+            "settings": {
+              "heading": "Information",
+              "menu": "ella-6-information"
+            }
+          }, {
+            "type": "link_list",
+            "settings": {
+              "heading": "Customer Service",
+              "menu": "ella-6-customer-service"
+            }
+          }
+        ]
+      }
+    ],
+    "enabled_on": {
+      "groups": ["footer"]
+    }
+  }
+{% endschema %}

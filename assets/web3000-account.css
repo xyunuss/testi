@@ -1,0 +1,22 @@
+.web3000-account-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 3.5rem;
+}
+
+.order-page .web3000-account-header h1 {
+	display: none;
+}
+
+@media screen and (min-width: 1025px) {
+	.web3000-account-header {
+		justify-content: flex-start;
+		gap: 2rem;
+		margin-bottom: 5.5rem;
+	}
+}
+
+.web3000-account-back {
+	color: var(--color-text-lightGray-2);
+	text-decoration: underline;
+}

@@ -1,0 +1,142 @@
+{{ 'web3000-two-col-image-section.css' | asset_url | stylesheet_tag: preload: true }}
+
+<div class="web3000-two-col-image bold-underline{% if section.settings.invert_colors %} invert-colors{% endif %}{% if section.settings.caption_underneath %} caption-underneath{% endif %}">
+  <div class="web3000-two-col-image__column entry-content">
+      {% if section.settings.link != blank %}
+        <a href="{{ section.settings.link }}">
+      {% endif %}
+        {% assign image_class = 'web3000-two-col-image__image' %}
+        {% if section.settings.caption_underneath %}
+          {% assign image_class = image_class | append: ' caption-underneath' %}
+        {% endif %}
+
+        {% if section.settings.video_mp4 != blank %}
+        <video class="web3000-video js-video" playsinline preload="none" autoplay loop muted>
+            <source src="{{ section.settings.video_mp4.sources[1].url }}" type="video/mp4">
+        </video>
+        {% elsif section.settings.image %}
+          {% render 'image'
+            , image: section.settings.image
+            , class_name: image_class %}
+        {% endif %}
+
+        {% if section.settings.text %}
+          <div class="web3000-two-col-image__text {% if section.settings.caption_underneath %}caption-underneath{% endif %} {% if section.settings.text_black %} text-black{% endif %}">{{ section.settings.text }}</div>
+        {% endif %}
+      {% if section.settings.link != blank %}
+        </a>
+      {% endif %}
+  </div>
+  <div class="web3000-two-col-image__column entry-content">
+      {% if section.settings.link_2 != blank %}
+        <a href="{{ section.settings.link_2 }}">
+      {% endif %}
+        {% if section.settings.video_mp4_2 != blank %}
+        <video class="web3000-video js-video" playsinline preload="none" autoplay loop muted>
+            <source src="{{ section.settings.video_mp4_2.sources[1].url }}" type="video/mp4">
+        </video>
+        {% elsif section.settings.image_2 %}
+          {% render 'image'
+            , image: section.settings.image_2
+            , class_name: 'web3000-two-col-image__image ' %}
+        {% endif %}
+
+        {% if section.settings.text_2 %}
+          <div class="web3000-two-col-image__text {% if section.settings.caption_underneath %}caption-underneath{% endif %} {% if section.settings.text_black_2 %} text-black{% endif %}">{{ section.settings.text_2 }}</div>
+        {% endif %}
+      {% if section.settings.link_2 != blank %}
+        </a>
+      {% endif %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "web3000 Two Col Medias",
+    "class": "web3000-two-col-block",
+    "tag": "section",
+    "settings": [
+
+      {
+        "type": "header",
+        "content": "Caption Placement"
+      },
+      {
+        "type": "checkbox",
+        "id": "caption_underneath",
+        "label": "Place caption underneath the image",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Background Color"
+      },
+      {
+        "type": "checkbox",
+        "id": "invert_colors",
+        "label": "Black Background",
+        "default": false
+      }, {
+        "type": "header",
+        "content": "Column I"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.image-banner.blocks.image.settings.image.label__1",
+        "info": "t:sections.image-banner.blocks.image.settings.image.info_1"
+      },{
+      "type": "video",
+      "id": "video_mp4",
+      "label": "Video mp4 File"
+    },
+    {
+        "type": "checkbox",
+        "id": "text_black",
+        "label": "Black Text Color", 
+        "default": false
+      },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Rich Text Content"
+      }, {
+        "type": "url",
+        "id": "link",
+        "label": "Link",
+        "info": "Add a link to wrap the entire section"
+      }, {
+        "type": "header",
+        "content": "Column II"
+      }, {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "t:sections.image-banner.blocks.image.settings.image.label__1",
+        "info": "t:sections.image-banner.blocks.image.settings.image.info_1"
+      },{
+        "type": "video",
+        "id": "video_mp4_2",
+        "label": "Video mp4 File"
+      }, 
+      {
+        "type": "checkbox",
+        "id": "text_black_2",
+        "label": "Black Text Color", 
+        "default": false
+      },
+      {
+        "type": "richtext",
+        "id": "text_2",
+        "label": "Rich Text Content"
+      }, {
+        "type": "url",
+        "id": "link_2",
+        "label": "Link",
+        "info": "Add a link to wrap the entire section"
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 Two Col Image"
+      }
+    ]
+  }
+{% endschema %}

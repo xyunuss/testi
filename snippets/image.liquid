@@ -1,0 +1,18 @@
+<img 
+    class="{{ class_name }}"
+    src="{{ image | image_url: width: 2500, format: 'pjpg' }}"
+    srcset="{{ image | image_url: width: 768, format: 'pjpg' }} 768w, 
+            {{ image | image_url: width: 1024, format: 'pjpg' }} 1024w, 
+            {{ image | image_url: width: 1600, format: 'pjpg' }} 1600w, 
+            {{ image | image_url: width: 1920, format: 'pjpg' }} 1920w, 
+            {{ image | image_url: width: 2500, format: 'pjpg' }} 2500w"
+    sizes="(max-width: 768px) 768px,
+           (max-width: 1024px) 1024px,
+           (max-width: 1600px) 1600px,
+           (max-width: 1920px) 1920px,
+           2500px"
+    width="{{ image.width }}"
+    height="{{ image.height }}"
+    alt="{{ image.alt | default: shop.name }}" 
+    loading="lazy"
+/>

@@ -1,0 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "web3000-recycling-page",
+      "blocks": {
+        "recycling_icon_qLaYXT": {
+          "type": "recycling_icon",
+          "settings": {
+            "recycling_icon": "shopify://shop_images/Frame_22.svg"
+          }
+        },
+        "recycling_icon_Dh4gb7": {
+          "type": "recycling_icon",
+          "settings": {
+            "recycling_icon": "shopify://shop_images/Group_245.svg"
+          }
+        }
+      },
+      "block_order": [
+        "recycling_icon_qLaYXT",
+        "recycling_icon_Dh4gb7"
+      ],
+      "settings": {
+        "product_image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_CLOSEDPACKAGING_Double.jpg",
+        "recycling_text": "<p><strong>THE LIPSTICK</strong></p><p>Das Produkt ist zu 100% hergestellt in Italien.<br/>The product is 100% made in Italy.<br/>Il prodotto è 100% made in Italy.<br/><br/>Hergestellt aus 97% PCR-Aluminium (Post-Consumer-Recycling-Aluminium). <br/>Made from 97% PCR aluminium (post-consumer recycled aluminium). <br/>Alluminio utilizzato 97% PCR (alluminio riciclato post-consumo).<br/><br/>Alle Kunststoffbestandteile bestehen aus 100% recycelbarem PP (Polypropylen).<br/>All plastic components are made from 100% recyclable PP (polypropylen). <br/>Tutte le parti in plastica sono composte 100% da PP (polipropílene) riciclabile.  </p><p><strong><br/>Wie zu entsorgen | How to dispose | Smaltimeto*:<br/><br/>C/ALU 90</strong>: Aluminium/Kunststoff | aluminum/plastic | alluminio/plastica<br/>Das leere Lippenstift-Gehäuse ohne Refill gehört in die gelbe Tonne.<br/>Place the empty lipstick case without refill in recycling bin.<br/>Rossetto alluminio senza refill: Contenitore per la raccolta differenziata e materiali da recupero per il riciclaggio.<br/><br/><strong>C/PP 90</strong>: Kunststoff/Aluminium | plastic/aluminum | plastica/alluminio<br/>Den Refill im Restmüll entsorgen.<br/>Place the refill part in trash.<br/>Refill: Contenitore raccolta indifferenziata.<br/><br/><strong>PAP 20</strong>: Wellpappe | paper and fibreboard packaging | cartone ondulato<br/><strong>PAP 21</strong>: sonstige Pappe | paper and fibreboard packaging | cartone non ondulato<br/>Umverpackung und Versandmaterialien gehören ins Altpapier.<br/>Place packaging and all shipping materials in paper bank.<br/>Materiale d'imballaggio e di spedizione: raccolta della carta e del cartone.</p><h6>* Kann von Land zu Land unterschiedlich sein. Bitte die örtlichen Bestimmungen vor Ort prüfen.<br/>Can be different per country. Please check the local regulations.<br/>Potrebbe variare a seconda del Paese. Si prega di controllare le normative locali.</h6>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

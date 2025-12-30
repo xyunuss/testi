@@ -1,0 +1,23 @@
+.web3000-order-address-wrapper {
+	display: grid;
+	gap: var(--grid-gap);
+}
+
+@media screen and (min-width: 1025px) {
+	.web3000-order-address-wrapper {
+		display: flex;
+	}
+}
+
+.web3000-order-address-wrapper .account-item {
+	max-width: 14rem;
+	width: 100%;
+}
+
+.web3000-order-address-wrapper address {
+	font-style: normal;
+}
+
+.web3000-order-address-content {
+	color: var(--color-text-darkGray);
+}

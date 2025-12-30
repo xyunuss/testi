@@ -1,0 +1,85 @@
+.recycling-wrapper {
+	margin-top: 4.5em;
+}
+
+.recycling-title {
+	margin-bottom: 1.3em;
+}
+
+.web3000-recycling-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--faq-box-bg-color);
+}
+
+.web3000-recycling-card--image {
+	aspect-ratio: 1;
+	height: calc(100vmin - 2 * var(--wrap));
+	margin-bottom: var(--wrap);
+}
+
+.web3000-recycling-card--image img {
+	aspect-ratio: 1;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.web3000-recycling-card__text {
+	padding: 2rem;
+	text-align: center;
+	color: var(--color-text-darkGray);
+	margin-bottom: var(--wrap);
+}
+
+.web3000-recycling-card__text p {
+	max-width: 35em;
+}
+
+.web3000-recycling-card__text :where(b, strong) {
+	font-weight: normal;
+	color: var(--color-text-black);
+}
+
+.web3000-recycling-icons {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: center;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+
+.web3000-recycling-icons img {
+	width: auto;
+	height: 3.3rem;
+}
+
+@media screen and (min-width: 1024px) {
+	.recycling-wrapper {
+		margin-top: -1.3em;
+	}
+
+	.web3000-recycling-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--wrap);
+	}
+
+	.web3000-recycling-card--image {
+		height: auto;
+		aspect-ratio: unset;
+	}
+
+	.web3000-recycling-icons img {
+		height: 4.5rem;
+		aspect-ratio: unset;
+	}
+
+	.web3000-recycling-card__text {
+		padding: 3rem;
+	}
+}

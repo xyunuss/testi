@@ -1,0 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "web3000_legal_6gLAag": {
+      "type": "web3000-legal",
+      "blocks": {
+        "group_iPbRx3": {
+          "type": "group",
+          "settings": {
+            "text": "",
+            "anchor": "",
+            "content": "<p>Bei Fragen oder Anliegen kontaktiere uns direkt unter <a href=\"mailto:service@haticeschmidt.com\">service@haticeschmidt.com</a>. </p><p>Wir werden deine Anfrage bearbeiten und uns bei dir melden.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "group_iPbRx3"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "web3000_legal_6gLAag"
+  ]
+}

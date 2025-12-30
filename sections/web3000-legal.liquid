@@ -1,0 +1,81 @@
+{{ 'web3000-legal.css' | asset_url | stylesheet_tag: preload: true }}
+
+<div class="web3000-legal-section wrap">
+    <div class="web3000-legal__nav-wrapper">
+
+      <h1 class="web3000-legal__page-title web3000-legal__page-title--1 hide-small"> 
+         {{ page_title }}
+      </h1>
+      <div class="web3000-legal__page-title"> 
+      {{ page_title }}
+      {% assign block_count = section.blocks.size %}
+      {% comment %} {% if block_count > 0 %}
+          ({{ block_count }})
+      {% endif %} {% endcomment %}
+      </div>
+      {% if block_count > 1 %}
+      <div class="web3000-legal__nav">
+        {% for block in section.blocks %}
+          {% if block.settings.text != blank %}
+          <div class="web3000-legal__nav-item">
+            <h2><a href="#{{ block.settings.anchor }}">{{ block.settings.text }}</a></h2>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="web3000-legal__content">
+      <div class="web3000-legal__page-title"> 
+      {{ page_title }}
+      {% assign block_count = section.blocks.size %}
+      {% comment %} {% if block_count > 0 %}
+          ({{ block_count }})
+      {% endif %} {% endcomment %}
+      </div>
+      {% for block in section.blocks %}
+        <div class="web3000-legal__block entry-content" id="{{ block.settings.anchor }}">
+          <div>{{ block.settings.content }}</div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+
+<script src="{{ 'web3000-side-nav.js' | asset_url }}" defer></script>
+
+
+{% schema %}
+{
+  "name": "web3000 Text Blocks/Nav",
+  "class": "web3000-legal-wrapper",
+  "tag": "section",
+  "blocks": [
+    {
+            "type": "group",
+            "name": "Text",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Group Section Name"
+                },
+                {
+                    "type": "text",
+                    "id": "anchor",
+                    "label": "Group Anchor (one word, no special characters)"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Group Text"
+                }
+            ]    
+    }
+  ],
+  "presets": [
+    {
+      "name": "web3000 Legal"
+    }
+  ]
+}
+{% endschema %}

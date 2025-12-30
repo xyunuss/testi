@@ -1,0 +1,483 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "web3000_collection_manual_F9wPMK": {
+      "type": "web3000-collection-manual",
+      "blocks": {
+        "group_78Kdh9": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRUSHcopy.jpg",
+            "hover_video_mp4": "shopify://files/videos/241010_HSL_ECom_20LipBrush_1x1.mp4",
+            "featured_product": "the-lip-brush",
+            "product_link": "https://haticeschmidt.com/products/the-lip-brush?variant=48744558723402",
+            "product_title": "THE LIP BRUSH",
+            "product_subtitle": "",
+            "product_badge": ""
+          }
+        },
+        "group_iMWkYi": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/SMOKED_ROSE_DUSTY_ROSE-1.jpg",
+            "hover_image": "shopify://shop_images/HATICE_SCHMIDT_Lipstick_THE_GIFT_Smoked_Rosewood_MARIKA1.jpg",
+            "featured_product": "the-gift-collection-set",
+            "product_link": "https://haticeschmidt.com/products/the-gift-collection-set?variant=49259675713866",
+            "product_title": "THE GIFT COLLECTION SET",
+            "product_subtitle": "Erhältlich in 5 Shades",
+            "product_badge": ""
+          }
+        },
+        "group_9XFVDn": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICE_SCHMIDT_THE_GIFT_LIPSTICK_CLOSED.jpg",
+            "hover_image": "shopify://shop_images/HATICE_SCHMIDT_Lipstick_THE_GIFT_Smoked_Rosewood__OPEN_Double.jpg",
+            "featured_product": "the-gift-matte-lipstick",
+            "product_link": "shopify://products/the-gift-matte-lipstick",
+            "product_title": "THE GIFT",
+            "product_subtitle": "Erhältlich in 5 Shades",
+            "product_badge": ""
+          }
+        },
+        "group_EjLFAD": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_Double_Open_copy_dc31f854-efed-4450-b32c-41c2081a31e6.jpg",
+            "hover_video_mp4": "shopify://files/videos/HATICESCHMIDTLABS_LIP_LINER_BLOOD_ROSE_BILLY_63d79b67-c2d2-40ed-a75c-17f10c3ff8be.mp4",
+            "featured_product": "the-liner",
+            "product_link": "shopify://products/the-liner",
+            "product_title": "THE LINER",
+            "product_subtitle": "Erhältlich in 5 Shades",
+            "product_badge": ""
+          }
+        },
+        "group_U9NDNy": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICE_SCHMIDT_LIPSTICK_THE_GIFT_REFILL_SMOKED_ROSEWOOD_Double.jpg",
+            "hover_video_mp4": "shopify://files/videos/HATICESCHMIDTLABS_LIPSTICKS_SMOKED_ROSEWOOD_SELINA.mp4",
+            "featured_product": "the-gift-refill-version",
+            "product_link": "shopify://products/the-gift-refill-version",
+            "product_title": "THE REFILL",
+            "product_subtitle": "NEW LEVEL MATTE LIPSTICK",
+            "product_badge": ""
+          }
+        },
+        "group_azp4YF": {
+          "type": "group",
+          "settings": {
+            "video_mp4": "shopify://files/videos/HATICESCHMIDTLABS_LIPSTICKS_CARAMELNECTAR_BILLY.mp4",
+            "hover_image": "shopify://shop_images/CARAMELNECTAR_WARMCREME_5d9d5b2e-3e1e-4298-8e98-093a2e71afc4.jpg",
+            "featured_product": "the-gift-lip-kit",
+            "product_link": "shopify://products/the-gift-lip-kit",
+            "product_title": "THE GIFT LIP KIT",
+            "product_subtitle": "Erhältlich in 5 Shades",
+            "product_badge": ""
+          }
+        },
+        "group_CiCKAm": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_HIGHLIGHTER_FAIR_OPEN_copy_c0306860-e40c-40ae-b211-b1fe60d0f402.jpg",
+            "hover_video_mp4": "shopify://files/videos/241010_HSL_ECom_8HighlighterMedium_1x1.mp4",
+            "featured_product": "highlighter",
+            "product_link": "shopify://products/highlighter",
+            "product_title": "THE HIGHLIGHTER LaBS EDITION",
+            "product_subtitle": "Erhältlich in 4 Shades",
+            "product_badge": ""
+          }
+        },
+        "group_fA43LM": {
+          "type": "group",
+          "settings": {
+            "video_mp4": "shopify://files/videos/241010_HSL_ECom_5BronzerDeep_1x1.mp4",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_Bronzer_Deep_Open_Double_copy_baf9bf37-2476-4697-9d24-6de9950accdb.jpg",
+            "featured_product": "bronzer",
+            "product_link": "shopify://products/bronzer",
+            "product_title": "THE BRONZER LaBS EDITION",
+            "product_subtitle": "Erhältlich in 5 Shades",
+            "product_badge": ""
+          }
+        },
+        "group_4Umrx9": {
+          "type": "group",
+          "settings": {
+            "image": "shopify://shop_images/DEEP_80e1e68b-5416-4b77-8bb0-7e92a297721c.jpg",
+            "hover_image": "shopify://shop_images/240907_Hatice-Schmidt-ECOM_BRONZER_DEEP_SELINA_189_copy.jpg",
+            "featured_product": "the-labs-edition-set",
+            "product_link": "https://haticeschmidt.com/products/the-labs-edition-set?variant=49118430724426",
+            "product_title": "THE LaBS EDITION SET",
+            "product_subtitle": "Erhältlich in 5 Shades",
+            "product_badge": ""
+          }
+        },
+        "group_BMGkeN": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "video_mp4": "shopify://files/videos/HATICESCHMIDTLABS_LIPSTICKS_MIDNIGHTROSE_SALEM.mp4",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_OPEN_MidnightRose.jpg",
+            "featured_product": "the-gift-matte-lipstick",
+            "product_link": "https://haticeschmidt.com/products/the-gift?variant=48744557019466",
+            "product_title": "THE GIFT",
+            "product_subtitle": "Midnight Rose",
+            "product_badge": ""
+          }
+        },
+        "group_f6T4FG": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "video_mp4": "shopify://files/videos/HATICESCHMIDTLABS_LIP_LINER_BLOOD_ROSE_BILLY_63d79b67-c2d2-40ed-a75c-17f10c3ff8be.mp4",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_Double_Opencopy_9bf4f244-bde0-4c4b-977a-e1368cd3499a.jpg",
+            "featured_product": "the-liner",
+            "product_link": "https://haticeschmidt.com/products/the-liner?variant=48744558559562",
+            "product_title": "THE LINER",
+            "product_subtitle": "Blood Rose",
+            "product_badge": ""
+          }
+        },
+        "group_YNkYnq": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_OPEN_CaramelNectar.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICKS_CARAMELNECTAR_SWATCH.jpg",
+            "featured_product": "the-gift-matte-lipstick",
+            "product_link": "https://haticeschmidt.com/products/the-gift?variant=48744556855626",
+            "product_title": "THE GIFT",
+            "product_subtitle": "Caramel Nectar",
+            "product_badge": ""
+          }
+        },
+        "group_GCgRCJ": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_WarmCreme_Double_Open_copy.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_LIPLINERS_SWATCH_WarmCreme_copy.jpg",
+            "featured_product": "the-liner",
+            "product_link": "https://haticeschmidt.com/products/the-liner?variant=48744558625098",
+            "product_title": "THE LINER",
+            "product_subtitle": "Warm Crème",
+            "product_badge": ""
+          }
+        },
+        "group_AfL3zj": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "video_mp4": "shopify://files/videos/241010_HSL_ECom_3BronzerMedium_1x1_41175e7a-552f-404d-b6d9-b038100e58c9.mp4",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_BRONZERS_Medium_OPEN_001_copy_fea2aa3a-d7e0-4130-b6a1-130c09ec5382.jpg",
+            "featured_product": "bronzer",
+            "product_link": "https://haticeschmidt.com/products/bronzer?variant=47963482390858",
+            "product_title": "THE BRONZER - LaBS EDITION",
+            "product_subtitle": "Medium",
+            "product_badge": ""
+          }
+        },
+        "group_3e9eFF": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_OPEN_SmokedRosewood.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICKS_SmokedRosewood_SWATCH1.jpg",
+            "featured_product": "the-gift-matte-lipstick",
+            "product_link": "https://haticeschmidt.com/products/the-gift?variant=48744556921162",
+            "product_title": "THE GIFT",
+            "product_subtitle": "Smoked Rosewood",
+            "product_badge": ""
+          }
+        },
+        "group_hbtUwB": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_DustyRose_Double_Open_copy.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_LIP_LINER_DUSTY_ROSE_SELINA.jpg",
+            "featured_product": "the-liner",
+            "product_link": "https://haticeschmidt.com/products/the-liner?variant=48744558690634",
+            "product_title": "THE LINER",
+            "product_subtitle": "Dusty Rose",
+            "product_badge": ""
+          }
+        },
+        "group_cMUbiD": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_OPEN_CardinalFlame.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICKS_CARDINALFLAME_MARIKA.jpg",
+            "featured_product": "the-gift-matte-lipstick",
+            "product_link": "https://haticeschmidt.com/products/the-gift?variant=48744556986698",
+            "product_title": "THE GIFT",
+            "product_subtitle": "Cardinal Flame",
+            "product_badge": ""
+          }
+        },
+        "group_Kpqtef": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_TrueCheryy_Double_Open_copy_5fb063fb-233d-41a1-a4c7-156c08095988.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_LIP_LINER_TRUE_CHERRY_MARIKA2_366b2297-4f7a-4132-af04-388b7e4cbf86.jpg",
+            "featured_product": "the-liner",
+            "product_link": "https://haticeschmidt.com/products/the-liner?variant=48744558592330",
+            "product_title": "THE LINER",
+            "product_subtitle": "True Cherry",
+            "product_badge": ""
+          }
+        },
+        "group_mf4CXa": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_RICH_NECTAR_OPEN.jpg",
+            "hover_video_mp4": "shopify://files/videos/HATICESCHMIDTLABS_LIPSTICK_RICH_NECTAR_SARA.mp4",
+            "featured_product": "the-gift-matte-lipstick",
+            "product_link": "https://haticeschmidt.com/products/the-gift?variant=48744556953930",
+            "product_title": "THE GIFT",
+            "product_subtitle": "Rich Nectar",
+            "product_badge": "AUSVERKAUFT"
+          }
+        },
+        "group_gQitV7": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "video_mp4": "shopify://files/videos/241010_HSL_ECom_11LiplinerCoolAsh_1x1.mp4",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_Lipliners_CoolAsh_Double_Open_copy.jpg",
+            "featured_product": "the-liner",
+            "product_link": "https://haticeschmidt.com/products/the-liner?variant=48744558657866",
+            "product_title": "THE LINER",
+            "product_subtitle": "Cool Ash",
+            "product_badge": ""
+          }
+        },
+        "group_VqGweL": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRONZERS_Fair_OPEN_001copy_7ed0dd5a-40fa-4da2-a615-b24166df525a.jpg",
+            "hover_video_mp4": "shopify://files/videos/241010_HSL_ECom_1BronzerFair_1x1_449db887-5ce8-41ac-9966-8d38833f1e35.mp4",
+            "featured_product": "bronzer",
+            "product_link": "https://haticeschmidt.com/products/bronzer?variant=47963482325322",
+            "product_title": "THE BRONZER - LaBS EDITION",
+            "product_subtitle": "Fair",
+            "product_badge": ""
+          }
+        },
+        "group_iLGnch": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_HIGHLIGHTER_DEEP_OPEN_001_copy.jpg",
+            "hover_video_mp4": "shopify://files/videos/241010_HSL_ECom_9HighlighterDeep_1x1.mp4",
+            "featured_product": "highlighter",
+            "product_link": "https://haticeschmidt.com/products/highlighter?variant=47963623424330",
+            "product_title": "THE HIGHLIGHTER - LaBS EDITION",
+            "product_subtitle": "Deep",
+            "product_badge": ""
+          }
+        },
+        "group_F7GmE6": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_HIGHLIGHTER_FAIR_OPENcopy.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_HIGHLIGHTER_Fair_Swatch_OriginalBackground_copy.jpg",
+            "featured_product": "highlighter",
+            "product_link": "https://haticeschmidt.com/products/highlighter?variant=47963623293258",
+            "product_title": "THE HIGHLIGHTER - LaBS EDITION",
+            "product_subtitle": "Fair",
+            "product_badge": ""
+          }
+        },
+        "group_rjNfEp": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRONZERS_Light_OPEN_001_copy_a72987e8-1cbc-4d3e-ad2e-6cda76156a0c.jpg",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_BRONZER_LIGHT_SWATCH_copy_c848674d-44cd-41e5-9f5c-bb890a552733.jpg",
+            "featured_product": "bronzer",
+            "product_link": "",
+            "product_title": "THE BRONZER - LaBS EDITION",
+            "product_subtitle": "Light",
+            "product_badge": ""
+          }
+        },
+        "group_UXXCMt": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRONZERS_Tan_OPEN_001_copy_57b00a26-d2f8-4ff7-ae38-8f083c2e900a.jpg",
+            "hover_image": "shopify://shop_images/240907_Hatice-Schmidt-ECOM_BRONZER_TAN_SALEM_070_copy.jpg",
+            "featured_product": "bronzer",
+            "product_link": "https://haticeschmidt.com/products/bronzer?variant=47963482423626",
+            "product_title": "THE BRONZER - LaBS EDITION",
+            "product_subtitle": "Tan",
+            "product_badge": ""
+          }
+        },
+        "group_h4JwHf": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_HIGHLIGHTER_LIGHT_OPEN_001_copy.jpg",
+            "hover_image": "shopify://shop_images/240907_Hatice-Schmidt-ECOM_HIGHLIGHTER_LIGHT_BILLY_090_copy.jpg",
+            "featured_product": "highlighter",
+            "product_link": "https://haticeschmidt.com/products/highlighter?variant=47963623326026",
+            "product_title": "THE HIGHLIGHTER - LaBS EDITION",
+            "product_subtitle": "Light",
+            "product_badge": ""
+          }
+        },
+        "group_mB8Qhk": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_HIGHLIGHTER_MEDIUM_OPEN_001_copy.jpg",
+            "hover_video_mp4": "shopify://files/videos/241010_HSL_ECom_8HighlighterMedium_1x1.mp4",
+            "featured_product": "highlighter",
+            "product_link": "https://haticeschmidt.com/products/highlighter?variant=47963623358794",
+            "product_title": "THE HIGHLIGHTER - LaBS EDITION",
+            "product_subtitle": "Medium",
+            "product_badge": ""
+          }
+        },
+        "group_iLJXMP": {
+          "type": "group",
+          "disabled": true,
+          "settings": {
+            "video_mp4": "shopify://files/videos/241010_HSL_ECom_5BronzerDeep_1x1.mp4",
+            "hover_image": "shopify://shop_images/HATICESCHMIDTLABS_Bronzer_Deep_Open_001_copy_a9e100cd-0855-4112-a485-4f3800b8dbfe.jpg",
+            "featured_product": "bronzer",
+            "product_link": "https://haticeschmidt.com/products/bronzer?variant=47963482456394",
+            "product_title": "THE BRONZER - LaBS EDITION",
+            "product_subtitle": "Deep",
+            "product_badge": ""
+          }
+        }
+      },
+      "block_order": [
+        "group_78Kdh9",
+        "group_iMWkYi",
+        "group_9XFVDn",
+        "group_EjLFAD",
+        "group_U9NDNy",
+        "group_azp4YF",
+        "group_CiCKAm",
+        "group_fA43LM",
+        "group_4Umrx9",
+        "group_BMGkeN",
+        "group_f6T4FG",
+        "group_YNkYnq",
+        "group_GCgRCJ",
+        "group_AfL3zj",
+        "group_3e9eFF",
+        "group_hbtUwB",
+        "group_cMUbiD",
+        "group_Kpqtef",
+        "group_mf4CXa",
+        "group_gQitV7",
+        "group_VqGweL",
+        "group_iLGnch",
+        "group_F7GmE6",
+        "group_rjNfEp",
+        "group_UXXCMt",
+        "group_h4JwHf",
+        "group_mB8Qhk",
+        "group_iLJXMP"
+      ],
+      "settings": {}
+    },
+    "web3000_product_set_xFqjVn": {
+      "type": "web3000-product-set",
+      "blocks": {
+        "group_VhkJ4T": {
+          "type": "group",
+          "settings": {
+            "double_width": true,
+            "image": "shopify://shop_images/lipsticklinerbrush.jpg",
+            "featured_product": "the-gift-collection-set",
+            "product_link": "shopify://products/the-gift-matte-lipstick",
+            "product_title": "THE GIFT COLLECTION SET",
+            "product_subtitle": "Erhältlich in 5 Shades"
+          }
+        },
+        "group_QRTgNh": {
+          "type": "group",
+          "settings": {
+            "double_width": false,
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_BRUSH_CLOSEUPcopy.jpg",
+            "featured_product": "the-lip-brush",
+            "product_link": "shopify://products/the-lip-brush",
+            "product_title": "",
+            "product_subtitle": ""
+          }
+        },
+        "group_zJaXT7": {
+          "type": "group",
+          "settings": {
+            "double_width": false,
+            "image": "shopify://shop_images/HATICESCHMIDTLABS_LIPSTICK_OPEN_CaramelNectar.jpg",
+            "featured_product": "the-gift-matte-lipstick",
+            "product_link": "shopify://products/the-gift-matte-lipstick",
+            "product_title": "",
+            "product_subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "group_VhkJ4T",
+        "group_QRTgNh",
+        "group_zJaXT7"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "web3000_full_width_image_video_kUkHjc": {
+      "type": "web3000-full-width-image-video",
+      "settings": {
+        "black_background": false,
+        "cover_image_mobile": "shopify://shop_images/HATICESCHMIDTLABS_LIP_LINER_TRUE_CHERRY_MARIKA2.jpg",
+        "video_mp4": "shopify://files/videos/241010_HSL_ECom_18LipstickRed_16x9.mp4",
+        "url_mp4": "",
+        "autoplay": true,
+        "caption": ""
+      }
+    },
+    "web3000_three_col_image_E7MtnR": {
+      "type": "web3000-three-col-image",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/HS-Campaign_Beauty_L04_0343.jpg",
+        "text_black": false,
+        "text": "",
+        "link": "",
+        "image_2": "shopify://shop_images/240907_Hatice-Schmidt-CAMPAIGN_PRODUCT_060.jpg",
+        "text_black_2": false,
+        "text_2": "",
+        "link_2": "shopify://products/the-gift-matte-lipstick",
+        "text_black_3": false,
+        "text_3": "<p>Our Puropose<br/><br/>Es beginnt in Berlin. Unsere Gründerin und Creative Director stammt aus sozial schwachen Verhältnissen und wächst in einem „Problemviertel“ auf. Ihre Kindheit und Jugend sind weitaus weniger glamourös als man es vermuten könnte. Das harte Pflaster und der raue Umgang formen sie. Daraus erwächst der kompromisslose</p>",
+        "link_3": ""
+      }
+    }
+  },
+  "order": [
+    "web3000_collection_manual_F9wPMK",
+    "web3000_product_set_xFqjVn",
+    "web3000_full_width_image_video_kUkHjc",
+    "web3000_three_col_image_E7MtnR"
+  ]
+}

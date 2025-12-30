@@ -1,0 +1,53 @@
+{{ 'web3000-rich-text-section.css' | asset_url | stylesheet_tag: preload: true }}
+
+<div
+  class="web3000-rich-text-section bold-underline{% if section.settings.invert_colors %} bg-black text-white{% endif %}{% if section.settings.big_margin %} big-margin{% endif %}"
+  {% if section.settings.invert_colors %}
+    data-midnight="white"
+  {% else %}
+    data-midnight="black"
+  {% endif %}
+>
+  <div class="container">
+    <div class="rich-text-content  entry-content">
+      {{ section.settings.richtext_content }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "web3000 Rich Text",
+    "class": "web3000-rich-text-block",
+    "tag": "section",
+    "settings": [
+
+      {
+        "type": "checkbox",
+        "id": "invert_colors",
+        "label": "Black Background",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "big_margin",
+        "label": "Big inner margin",
+        "default": false
+      }, {
+        "type": "richtext",
+        "id": "richtext_content",
+        "label": "Rich Text Content",
+        "default": "<p>Enter your rich text content here...</p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "web3000 Rich Text",
+        "settings": {
+          "invert_colors": false,
+          "big_margin": false,
+          "richtext_content": "<p>This is a rich text section. Edit this content to customize.</p>"
+        }
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,172 @@
+.auth-text {
+	text-align: center;
+	color: var(--color-text2);
+}
+
+.auth-form .form-input {
+	text-align: center;
+}
+
+.auth-actions {
+	margin: 15px 0 0 0;
+}
+
+.auth-actions a {
+	margin: 2rem auto 0;
+}
+
+.auth-actions a:last-child {
+	margin: 1.2rem auto 0;
+}
+
+.web3000-component-auth__login-title {
+	text-align: center;
+}
+
+.auth-link,
+.button-register {
+	display: block;
+	width: fit-content;
+	margin: 1em 0;
+	color: var(--color-text-white);
+	text-decoration: underline;
+}
+
+.auth-form .form-field + .form-field,
+.auth-actions .button + .button {
+	margin-top: 12px;
+}
+
+.auth-form.auth-form-2 {
+	padding: 4rem var(--wrap);
+}
+
+.auth-form.auth-form-2 label {
+	display: none;
+}
+
+.auth-form.auth-form-2 .form-input {
+	text-align: left;
+}
+
+.account-dropdown {
+	padding: 30px 20px;
+}
+
+.account-dropdown .account-item {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 100%;
+	color: var(--color-text-white) !important;
+}
+
+.account-dropdown .account-item:nth-child(3) {
+	display: none;
+}
+
+.account-dropdown .account-item:last-child {
+	border-bottom: 0;
+}
+
+.account-dropdown .account-action {
+	width: 100%;
+	padding: 10px 0;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+body.auth-sidebar-show {
+	overflow-y: scroll;
+}
+
+/* body.auth-popup-show,
+body.auth-sidebar-show {
+	overflow-y: hidden;
+	overflow-x: hidden;
+} */
+
+body.auth-popup-show .background-overlay,
+body.auth-sidebar-show .background-overlay {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+body.auth-popup-show .halo-auth-popup {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+/* .halo-auth-sidebar {
+	max-width: 100%;
+	transform: none !important;
+	pointer-events: none;
+} */
+
+.web3000-component-auth {
+	display: none;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	padding: 0;
+	height: 100%;
+	z-index: var(--halo-sidebar-z-index);
+	width: 100%;
+	color: var(--color-text-white) !important;
+	/*transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;*/
+}
+
+body.auth-sidebar-show .web3000-component-auth {
+	display: block;
+}
+
+.web3000-component-auth__close-area {
+	max-width: 43rem;
+	margin: 0 auto;
+	top: 50%;
+	position: relative;
+	transform: translateY(-50%);
+}
+
+.web3000-component-auth a.link.account-action {
+	color: var(--color-text-black) !important;
+}
+
+body.template-index .web3000-component-auth a.link.account-action {
+	color: var(--color-text-white) !important;
+}
+
+.halo-auth-sidebar .title,
+.halo-auth-sidebar .form-actions a {
+	text-align: center;
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
+	color: var(--color-text-white) !important;
+}
+
+customer-auth .halo-sidebar-close-text {
+	color: var(--color-text-white) !important;
+}
+
+.web3000-component-auth__wrapper:has(.account-dropdown) + .halo-sidebar-close-text {
+	color: var(--color-text-black) !important;
+}
+
+/* body.template-index customer-auth .halo-sidebar-close-text {
+	color: var(--color-text-white) !important;
+} */
+
+.halo-auth-sidebar .form-actions a {
+	margin-top: 2em;
+}
+
+.halo-sidebar-close--logged-in svg path {
+	fill: var(--color-text-black) !important;
+}
+
+body.template-index .halo-sidebar-close--logged-in svg path {
+	fill: var(--color-text-white) !important;
+}
